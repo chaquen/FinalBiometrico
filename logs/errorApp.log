@@ -1,0 +1,26 @@
+PHP Error[27-06-18 23:12:49] => {1}=>{Table 'db_ong_local.users' doesn't existSENTENCIA 
+[INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('45','Test 1 coordinador','No borrar','12345678','0','amora094@gmail.com','')]}
+PHP Error[27-06-18 23:12:49] => {1}=>{SENTENCIA 
+ [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('45','Test 1 coordinador','No borrar','12345678','0','amora094@gmail.com','')]}
+PHP Error[27-06-18 23:12:49] => {1}=>{Table 'db_ong_local.eventos' doesn't existSENTENCIA 
+[INSERT INTO eventos (id,id_ref,name,description,date,city,address,atachments,state,img,created_at,updated_at) 
+                VALUES ('1','45','Evento test','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu','2018-05-03 15:31:44','La Dorada, Caldas, Colombia','Cr 14-15','1525379656pdf_example.pdf','true','376.png','2018-06-27 16:11:20','2018-06-27 16:11:20')]}
+PHP Error[27-06-18 23:12:49] => {1}=>{SENTENCIA 
+ [INSERT INTO eventos (id,id_ref,name,description,date,city,address,atachments,state,img,created_at,updated_at) 
+                VALUES ('1','45','Evento test','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu','2018-05-03 15:31:44','La Dorada, Caldas, Colombia','Cr 14-15','1525379656pdf_example.pdf','true','376.png','2018-06-27 16:11:20','2018-06-27 16:11:20')]}
+PHP Error[27-06-18 23:13:12] => {1}=>{Table 'db_ong_local.users' doesn't existSENTENCIA 
+[INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('45','Test 1 coordinador','No borrar','12345678','0','amora094@gmail.com','')]}
+PHP Error[27-06-18 23:13:12] => {1}=>{SENTENCIA 
+ [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('45','Test 1 coordinador','No borrar','12345678','0','amora094@gmail.com','')]}
+PHP Error[27-06-18 23:13:12] => {1}=>{Table 'db_ong_local.eventos' doesn't existSENTENCIA 
+[INSERT INTO eventos (id,id_ref,name,description,date,city,address,atachments,state,img,created_at,updated_at) 
+                VALUES ('1','45','Evento test','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu','2018-05-03 15:31:44','La Dorada, Caldas, Colombia','Cr 14-15','1525379656pdf_example.pdf','true','376.png','2018-06-27 16:11:44','2018-06-27 16:11:44')]}
+PHP Error[27-06-18 23:13:12] => {1}=>{SENTENCIA 
+ [INSERT INTO eventos (id,id_ref,name,description,date,city,address,atachments,state,img,created_at,updated_at) 
+                VALUES ('1','45','Evento test','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu','2018-05-03 15:31:44','La Dorada, Caldas, Colombia','Cr 14-15','1525379656pdf_example.pdf','true','376.png','2018-06-27 16:11:44','2018-06-27 16:11:44')]}
+PHP Error[27-06-18 23:15:52] => {1}=>{SELECT * FROM users WHERE  id = 45}
+PHP Error[27-06-18 23:15:52] => {1}=>{SELECT * FROM eventos WHERE  id = 1}
