@@ -201,6 +201,10 @@ function agregar_a_var_participantes(dato){
     }
 
     if(!existe){
+        console.log(participantes);
+        if(participantes==null){
+            participantes=[];
+        }
         participantes.push(dato);
           dibujar_registrados();
     }
