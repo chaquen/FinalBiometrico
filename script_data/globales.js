@@ -15,6 +15,7 @@ var globales={
 	_recordarme:false,
 	_eventos:false,
 	_departamentos:false,
+	_municipios:false
 
 };
 

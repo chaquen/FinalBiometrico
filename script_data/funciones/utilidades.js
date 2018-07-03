@@ -495,6 +495,39 @@ function crear_data_list(id_data_list,datos,id,valor){
       }
     }
  });
+
+  console.log(sel);
+}
+function crear_data_list_tres(id_data_list,datos,id,valor){
+  var existe=false;
+  var sel=document.getElementById(id_data_list);
+          sel.innerHTML="";
+          var opt=document.createElement("option");
+          opt.innerHTML="SELECCIONA UNA";
+          opt.setAttribute("value","--");
+          sel.appendChild(opt); 
+          
+
+  Object.keys(datos).forEach(function(clave) {
+
+    var mis_llaves=Object.keys(datos[clave]);
+    
+    for(var l in mis_llaves){
+
+      if(existe==false && mis_llaves[l]==id){
+        var opt=document.createElement("option");
+        opt.setAttribute("value",datos[clave][id]+"-"+datos[clave][valor]);
+        existe=true;
+      }
+      if(existe==true && mis_llaves[l]==valor){
+        opt.innerHTML=datos[clave][id]+"-"+datos[clave][valor];
+        sel.appendChild(opt); 
+        existe=false;
+        var opt=document.createElement("option");
+      }
+    }
+ });
+  
   console.log(sel);
 }
 function crear_data_list_dos(id_data_list,datos){
