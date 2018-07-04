@@ -597,3 +597,112 @@ function dibujar_grafico_reporte(){
 							   
 							   
 }
+function dibujar_reporte_torta(){
+	//escolariodad
+	var data_esco = google.visualization.arrayToDataTable( todo_esco     );
+
+	var options_esoc = {
+		     
+		         title: nom_reporte,
+          		 is3D: true,
+		         };
+			        	    
+	var chartesco = new google.visualization.PieChart(document.getElementById('piechart_material_esco'));
+        chartesco.draw(data_esco,options_esoc);
+       //genero
+       var data_genero = google.visualization.arrayToDataTable(
+							          todo_genero
+							         );
+         var options_genero = {
+		     title: nom_reporte,
+          	     is3D: true,
+		    };
+
+      var chartgen = new google.visualization.PieChart(document.getElementById('piechart_material_gen'));
+	chartgen.draw(data_genero, options_genero);
+	//proceso
+	var data_pro = google.visualization.arrayToDataTable( todo_proceso );
+
+							        var options_pro = {
+							          title: nom_reporte,
+          							  is3D: true,
+							        };
+
+							        var chart_pro = new google.visualization.PieChart(document.getElementById('piechart_material_proceso'));
+
+							        chart_pro.draw(data_pro, options_pro);
+	//organizacion
+	var data_org = google.visualization.arrayToDataTable(todo_orga);
+
+							        var options_org = {
+							          title: nom_reporte,
+          							  is3D: true,
+							        };
+
+							        var chart_org = new google.visualization.PieChart(document.getElementById('piechart_material_orga'));
+
+							        chart_org.draw(data_org, options_org);		
+	//etnia
+	 var data_etnia = google.visualization.arrayToDataTable( todo_etnia);
+
+							        var options_etnia = {
+							           title: nom_reporte,
+          							  is3D: true,
+							        };
+
+							        var chart_et = new google.visualization.PieChart(document.getElementById('piechart_material_etnia'));
+
+							        chart_et.draw(data_etnia, options_etnia);						        				      
+	//edad
+	  var data_ed = google.visualization.arrayToDataTable(  todo_edad );
+
+							        var options_ed = {
+							          title: nom_reporte,
+          							  is3D: true,
+							        };
+
+							        var chart_ed = new google.visualization.PieChart(document.getElementById('piechart_material_eda'));
+
+							        chart_ed.draw(data_ed,options_ed);						        
+	//departamento nacimiento
+	var data_dep_nac = google.visualization.arrayToDataTable(todo_dep_nac   );
+
+							        var options_dep_nac = {
+							           title: nom_reporte,
+          							   is3D: true,
+							        };
+
+							        var chart_dep_nac = new google.visualization.PieChart(document.getElementById('piechart_material_dep_nac'));
+
+							        chart_dep_nac.draw(data_dep_nac, options_dep_nac);						        
+
+	//ciudad nacimeinto
+	        var data_ciu_nac = google.visualization.arrayToDataTable( todo_ciu_nac );
+
+							        var options_ciu_nac = {
+							           title: nom_reporte,
+          							   is3D: true,
+							        };
+
+							        var chart_ciu_nac = new google.visualization.PieChart(document.getElementById('piechart_material_ciu'));
+
+							        chart_ciu_nac.draw(data_ciu_nac, options_ciu_nac );						        
+	//capacidad diferecias
+	var data_cap_dif = google.visualization.arrayToDataTable( todo_cap_dife );
+
+							        var options_cap_dif = {
+							           title: nom_reporte,
+          							   is3D: true,
+							        };
+
+							        var chart_cap_dif = new google.visualization.PieChart(document.getElementById('piechart_material_cap_dif'));
+
+							        chart_cap_dif.draw(data_cap_dif, options_cap_dif);						        
+
+
+							   
+		
+
+
+
+}
