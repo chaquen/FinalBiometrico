@@ -136,12 +136,43 @@ function iniciar_evento_participantes(){
         });
     });
 
-    consultarDatosOff("script_data/data/colombia.json","",{},function(rs){
+   
+    /*agregarEvento("txt_leg_exp","keypress",function(e){        
+        console.log(e);
+        console.log(e.key);
+        var mun=[];
+         if (e.keyCode != 13 && e.key!=undefined) {
+            for(var el in globales._departamentos){
+                console.log(globales.municipios[el].toUpperCase());
+                console.log(e.key);
+                
+                if(globales._municipios[el].toUpperCase().indexOf(e.key.toUpperCase()) >= 0){
+                    
+                    //console.log(globales._departamentos[el].departamento);
+                    mun.push(globales.municipios[el]);
+                }
+            }
+            console.log(dep2)
+            crear_data_list("lista_muni",mun2,"id","ciudades");  
+         }
+            
+    });*/
+
+    cargar_archivos();
+
+}
+
+function cargar_archivos(){
+     consultarDatosOff("script_data/data/colombia.json","",{},function(rs){
         console.log(rs);
         globales._departamentos=rs;
         crear_data_list("txt_dep_nacimiento",rs,"id","departamento");
         
     });
-    
+
+
+   
 }
+
+
 agregarEventoLoad(iniciar_evento_participantes);

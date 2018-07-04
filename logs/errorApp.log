@@ -427,3 +427,36 @@ PHP Error[28-06-18 01:42:24] => {1}=>{SELECT participantes.id,participantes.pri_
 PHP Error[28-06-18 01:42:24] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
 PHP Error[28-06-18 01:42:27] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
 PHP Error[28-06-18 01:42:30] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[28-06-18 22:52:02] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[28-06-18 22:52:31] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[28-06-18 22:52:51] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[04-07-18 16:38:52] => {1}=>{Table 'db_ong_local.users' doesn't existSENTENCIA 
+[INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('','','','','','','')]}
+PHP Error[04-07-18 16:38:52] => {1}=>{SENTENCIA 
+ [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('','','','','','','')]}
+PHP Error[04-07-18 16:40:15] => {1}=>{Table 'db_ong_local.users' doesn't existSENTENCIA 
+[INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('','','','','','','')]}
+PHP Error[04-07-18 16:40:15] => {1}=>{SENTENCIA 
+ [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('','','','','','','')]}
+PHP Error[04-07-18 18:23:13] => {1}=>{Table 'db_ong_local.users' doesn't existSENTENCIA 
+[INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('','','','','','','')]}
+PHP Error[04-07-18 18:23:13] => {1}=>{SENTENCIA 
+ [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('','','','','','','')]}
+PHP Error[04-07-18 18:24:09] => {1}=>{Table 'db_ong_local.users' doesn't existSENTENCIA 
+[INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('','','','','','','')]}
+PHP Error[04-07-18 18:24:09] => {1}=>{SENTENCIA 
+ [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('','','','','','','')]}
+PHP Error[04-07-18 18:25:02] => {1}=>{Table 'db_ong_local.users' doesn't existSENTENCIA 
+[INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('','','','','','','')]}
+PHP Error[04-07-18 18:25:02] => {1}=>{SENTENCIA 
+ [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('','','','','','','')]}

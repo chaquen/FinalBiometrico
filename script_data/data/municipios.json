@@ -1,17 +1,11 @@
-[  
-    {  
+[
+	{  
         "id":0,
-        "departamento":"Amazonas",
+        
         "ciudades":[  
-            "selecciona una opci\u00f3",
+            "selecciona una opci\u00f3n",
             "Puerto Nari\u00f1o",
-            "Leticia"
-        ]
-    },
-    {  
-        "id":1,
-        "departamento":"Antioquia",
-        "ciudades":[  
+            "Leticia",
             "Abejorral",
             "Abriaqu\u00ed",
             "Alejandr\u00eda",
@@ -136,26 +130,14 @@
             "Yarumal",
             "Yolomb\u00f3",
             "Yond\u00f3",
-            "Zaragoza"
-        ]
-    },
-    {  
-        "id":2,
-        "departamento":"Arauca",
-        "ciudades":[  
+            "Zaragoza",
             "Arauca",
             "Arauquita",
             "Cravo Norte",
             "Fortul",
             "Puerto Rond\u00f3n",
             "Saravena",
-            "Tame"
-        ]
-    },
-    {  
-        "id":3,
-        "departamento":"Atl\u00e1ntico",
-        "ciudades":[  
+            "Tame",
             "Baranoa",
             "Barranquilla",
             "Campo de la Cruz",
@@ -178,13 +160,7 @@
             "Soledad",
             "Su\u00e1n",
             "Tubar\u00e1",
-            "Usiacur\u00ed"
-        ]
-    },
-    {  
-        "id":4,
-        "departamento":"Bol\u00edvar",
-        "ciudades":[  
+            "Usiacur\u00ed",
             "Ach\u00ed",
             "Altos del Rosario",
             "Arenal",
@@ -231,13 +207,7 @@
             "Turbaco",
             "Turban\u00e1",
             "Villanueva",
-            "Zambrano"
-        ]
-    },
-    {  
-        "id":5,
-        "departamento":"Boyac\u00e1",
-        "ciudades":[  
+            "Zambrano",
             "Almeida",
             "Aquitania",
             "Arcabuco",
@@ -360,13 +330,7 @@
             "Ventaquemada",
             "Villa de Leyva",
             "Viracach\u00e1",
-            "Zetaquira"
-        ]
-    },
-    {  
-        "id":6,
-        "departamento":"Caldas",
-        "ciudades":[  
+            "Zetaquira",
             "Aguadas",
             "Anserma",
             "Aranzazu",
@@ -393,13 +357,7 @@
             "Sup\u00eda",
             "Victoria",
             "Villamar\u00eda",
-            "Viterbo"
-        ]
-    },
-    {  
-        "id":7,
-        "departamento":"Caquet\u00e1",
-        "ciudades":[  
+            "Viterbo",
             "Albania",
             "Bel\u00e9n de los Andaqu\u00edes",
             "Cartagena del Chair\u00e1",
@@ -415,13 +373,7 @@
             "San Vicente del Cagu\u00e1n",
             "Solano",
             "Solita",
-            "Valpara\u00edso"
-        ]
-    },
-    {  
-        "id":8,
-        "departamento":"Casanare",
-        "ciudades":[  
+            "Valpara\u00edso",
             "Aguazul",
             "Ch\u00e1meza",
             "Hato Corozal",
@@ -440,13 +392,7 @@
             "Tauramena",
             "Trinidad",
             "Villanueva",
-            "Yopal"
-        ]
-    },
-    {  
-        "id":9,
-        "departamento":"Cauca",
-        "ciudades":[  
+            "Yopal",
             "Almaguer",
             "Argelia",
             "Balboa",
@@ -488,13 +434,7 @@
             "Timbiqu\u00ed",
             "Torib\u00edo",
             "Totor\u00f3",
-            "Villa Rica"
-        ]
-    },
-    {  
-        "id":10,
-        "departamento":"Cesar",
-        "ciudades":[  
+            "Villa Rica",
             "Aguachica",
             "Agust\u00edn Codazzi",
             "Astrea",
@@ -519,13 +459,7 @@
             "San Diego",
             "San Mart\u00edn",
             "Tamalameque",
-            "Valledupar"
-        ]
-    },
-    {  
-        "id":11,
-        "departamento":"Choc\u00f3",
-        "ciudades":[  
+            "Valledupar",
             "Acand\u00ed",
             "Alto Baud\u00f3",
             "Bagad\u00f3",
@@ -555,13 +489,7 @@
             "Sip\u00ed",
             "Tad\u00f3",
             "Uni\u00f3n Panamericana",
-            "Ungu\u00eda"
-        ]
-    },
-    {  
-        "id":12,
-        "departamento":"Cundinamarca",
-        "ciudades":[  
+            "Ungu\u00eda",
             "Agua de Dios",
             "Alb\u00e1n",
             "Anapoima",
@@ -678,13 +606,7 @@
             "Viot\u00e1",
             "Yacop\u00ed",
             "Zipac\u00f3n",
-            "Zipaquir\u00e1"
-        ]
-    },
-    {  
-        "id":13,
-        "departamento":"C\u00f3rdoba",
-        "ciudades":[  
+            "Zipaquir\u00e1",
             "Ayapel",
             "Buenavista",
             "Canalete",
@@ -714,30 +636,12 @@
             "San Pelayo",
             "Tierralta",
             "Tuch\u00edn",
-            "Valencia"
-        ]
-    },
-    {  
-        "id":14,
-        "departamento":"Guain\u00eda",
-        "ciudades":[  
-            "In\u00edrida"
-        ]
-    },
-    {  
-        "id":15,
-        "departamento":"Guaviare",
-        "ciudades":[  
+            "Valencia",
+            "In\u00edrida",
             "Calamar",
             "El Retorno",
             "Miraflores",
-            "San Jos\u00e9 del Guaviare"
-        ]
-    },
-    {  
-        "id":16,
-        "departamento":"Huila",
-        "ciudades":[  
+            "San Jos\u00e9 del Guaviare",
             "Acevedo",
             "Agrado",
             "Aipe",
@@ -774,13 +678,7 @@
             "Tesalia",
             "Timan\u00e1",
             "Villavieja",
-            "Yaguar\u00e1"
-        ]
-    },
-    {  
-        "id":17,
-        "departamento":"La Guajira",
-        "ciudades":[  
+            "Yaguar\u00e1",
             "Albania",
             "Barrancas",
             "Dibulla",
@@ -795,14 +693,8 @@
             "San Juan del Cesar",
             "Uribia",
             "Urumita",
-            "Villanueva"
-        ]
-    },
-    {  
-        "id":18,
-        "departamento":"Magdalena",
-        "ciudades":[  
-            "Algarrobo",
+            "Villanueva",
+             "Algarrobo",
             "Aracataca",
             "Ariguan\u00ed",
             "Cerro de San Antonio",
@@ -832,14 +724,8 @@
             "Sitionuevo",
             "Tenerife",
             "Zapay\u00e1n",
-            "Zona Bananera"
-        ]
-    },
-    {  
-        "id":19,
-        "departamento":"Meta",
-        "ciudades":[  
-            "Acac\u00edas",
+            "Zona Bananera",
+             "Acac\u00edas",
             "Barranca de Up\u00eda",
             "Cabuyaro",
             "Castilla la Nueva",
@@ -867,13 +753,7 @@
             "San Juanito",
             "San Mart\u00edn",
             "Villavicencio",
-            "Vista Hermosa"
-        ]
-    },
-    {  
-        "id":20,
-        "departamento":"Nari\u00f1o",
-        "ciudades":[  
+            "Vista Hermosa",
             "Aldana",
             "Ancuy\u00e1",
             "Arboleda",
@@ -937,13 +817,7 @@
             "Tangua",
             "Tumaco",
             "T\u00faquerres",
-            "Yacuanquer"
-        ]
-    },
-    {  
-        "id":21,
-        "departamento":"Norte de Santander",
-        "ciudades":[  
+            "Yacuanquer",
             "\u00c1brego",
             "Arboledas",
             "Bochalema",
@@ -983,13 +857,7 @@
             "Tib\u00fa",
             "Toledo",
             "Villa Caro",
-            "Villa del Rosario"
-        ]
-    },
-    {  
-        "id":22,
-        "departamento":"Putumayo",
-        "ciudades":[  
+            "Villa del Rosario",
             "Col\u00f3n",
             "Mocoa",
             "Orito",
@@ -1002,14 +870,8 @@
             "Santiago",
             "Sibundoy",
             "Valle del Guamuez",
-            "Villagarz\u00f3n"
-        ]
-    },
-    {  
-        "id":23,
-        "departamento":"Quind\u00edo",
-        "ciudades":[  
-            "Armenia",
+            "Villagarz\u00f3n",
+             "Armenia",
             "Buenavista",
             "Calarc\u00e1",
             "Circasia",
@@ -1020,14 +882,8 @@
             "Montenegro",
             "Pijao",
             "Quimbaya",
-            "Salento"
-        ]
-    },
-    {  
-        "id":24,
-        "departamento":"Risaralda",
-        "ciudades":[  
-            "Ap\u00eda",
+            "Salento",
+             "Ap\u00eda",
             "Balboa",
             "Bel\u00e9n de Umbr\u00eda",
             "Dosquebradas",
@@ -1040,21 +896,9 @@
             "Pueblo Rico",
             "Quinch\u00eda",
             "Santa Rosa de Cabal",
-            "Santuario"
-        ]
-    },
-    {  
-        "id":25,
-        "departamento":"San Andr\u00e9s y Providencia",
-        "ciudades":[  
+            "Santuario",
             "Providencia y Santa Catalina Islas",
-            "San Andr\u00e9s"
-        ]
-    },
-    {  
-        "id":26,
-        "departamento":"Santander",
-        "ciudades":[  
+            "San Andr\u00e9s",
             "Aguada",
             "Albania",
             "Aratoca",
@@ -1141,13 +985,7 @@
             "V\u00e9lez",
             "Vetas",
             "Villanueva",
-            "Zapatoca"
-        ]
-    },
-    {  
-        "id":27,
-        "departamento":"Sucre",
-        "ciudades":[  
+            "Zapatoca",
             "Buenavista",
             "Caimito",
             "Chal\u00e1n",
@@ -1173,14 +1011,8 @@
             "Sincelejo",
             "Sucre",
             "Tol\u00fa",
-            "Tol\u00fa Viejo"
-        ]
-    },
-    {  
-        "id":28,
-        "departamento":"Tolima",
-        "ciudades":[  
-            "Alpujarra",
+            "Tol\u00fa Viejo",
+             "Alpujarra",
             "Alvarado",
             "Ambalema",
             "Anzo\u00e1tegui",
@@ -1226,13 +1058,7 @@
             "Valle de San Juan",
             "Venadillo",
             "Villahermosa",
-            "Villarrica"
-        ]
-    },
-    {  
-        "id":29,
-        "departamento":"Valle del Cauca",
-        "ciudades":[  
+            "Villarrica",
             "Alcal\u00e1",
             "Andaluc\u00eda",
             "Ansermanuevo",
@@ -1274,26 +1100,14 @@
             "Vijes",
             "Yotoco",
             "Yumbo",
-            "Zarzal"
-        ]
-    },
-    {  
-        "id":30,
-        "departamento":"Vaup\u00e9s",
-        "ciudades":[  
+            "Zarzal",
             "Carur\u00fa",
             "Mit\u00fa",
-            "Taraira"
-        ]
-    },
-    {  
-        "id":31,
-        "departamento":"Vichada",
-        "ciudades":[  
+            "Taraira",
             "Cumaribo",
             "La Primavera",
             "Puerto Carre\u00f1o",
             "Santa Rosal\u00eda"
         ]
-    }
+    },
 ]
