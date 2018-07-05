@@ -89,21 +89,36 @@ body {
     padding-top: 80px;
     margin-top: 0;
 }
+select {
+    border-radius: 5px;
+    border: 1px solid #C82C0A;
+    width: 80%;
+    height: 30px;
+    color: #C82C0A;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.identificacion {
+    
+    display: table;
+}
 .identificacion li {
     float: left;
     width: 33%;
+    
+}
+.identificacion li:nth-child(4){
+    width: 49.5%;
 }
 .identificacion li:nth-child(5){
-    width: 49%;
+    width: 49.5%;
 }
 .identificacion li:nth-child(6){
-    width: 49%;
+    width: 49.5%;
 }
 .identificacion li:nth-child(7){
-    width: 49%;
-}
-.identificacion li:nth-child(8){
-    width: 49%;
+    width: 49.5%;
 }
 
 .datosPersonales {
@@ -111,23 +126,24 @@ body {
 }
 .datosPersonales li {
     float: left;
-    width: 16.6%;
+    width: 33%;
 }
-.datosPersonales li:nth-child(3){
-    width: 20%;
+.datosPersonales li:nth-child(1){
+    width: 49%;
 }
-.datosPersonales li:nth-child(4){
-    width: 19%;
-}
-.datosPersonales li:nth-child(5){
-    width: 8%;
+.datosPersonales li:nth-child(2){
+    width: 49%;
 }
 .datosPersonales li:nth-child(6){
-    width: 23.6%;
+    width: 49%;
 }
 .datosPersonales li:nth-child(7){
-    width: 12%;
+    width: 49%;
 }
+.datosPersonales li h6 {
+    margin-bottom: 10px;
+}
+
 .ubicacion {
     clear: both;
     width: 98%;
@@ -168,12 +184,14 @@ input[type=text] {
     margin-top: 5px;
     color: #59B959;
 }
-input[type=date] {
-    width: 95%;
-    height: 25px;
+input[type=date]{
     border-radius: 5px;
-    margin-left: 2%;
-    margin-top: 5px;
+    border: 1px solid #C82C0A;
+    width: 80%;
+    height: 30px;
+    color: #C82C0A;
+    margin: auto;
+    margin-top: 20px;
 }
 input[type=number] {
     width: 95%;
@@ -191,13 +209,6 @@ input[type=button]{
 input[type=button]:hover {
     background-color: #9DF69D;
     color: #437843;
-}
-select {
-    width: 95%;
-    height: 29px;
-    border-radius: 5px;
-    margin-left: 2%;
-    margin-top: 5px;
 }
 table {
     width: 70%;
@@ -218,4 +229,9 @@ tbody tr td {
 #p2 {
     margin-top: 50px;
     margin: auto;
+}
+.reporte {
+    border: 1px solid red;
+    width: 80%;
+    height: 100px;
 }

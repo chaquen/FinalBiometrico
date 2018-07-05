@@ -460,3 +460,59 @@ PHP Error[04-07-18 18:25:02] => {1}=>{Table 'db_ong_local.users' doesn't existSE
 PHP Error[04-07-18 18:25:02] => {1}=>{SENTENCIA 
  [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
                 VALUES ('','','','','','','')]}
+PHP Error[05-07-18 17:50:35] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[05-07-18 17:50:36] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[05-07-18 17:50:37] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[05-07-18 17:55:33] => {1}=>{}
+PHP Error[05-07-18 17:55:33] => {1}=>{}
+PHP Error[05-07-18 17:55:33] => {1}=>{SENTENCIA 
+ [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('46','Andres Test','Test Test','12345678','0','amora094@gmail.com','')]}
+PHP Error[05-07-18 17:55:33] => {1}=>{}
+PHP Error[05-07-18 17:55:33] => {1}=>{}
+PHP Error[05-07-18 17:55:33] => {1}=>{SENTENCIA 
+ [INSERT INTO eventos (id,id_ref,name,description,date,city,address,atachments,state,img,created_at,updated_at) 
+                VALUES ('6','46','Test evento sinc','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu','2018-08-03 16:03:27','La Dorada, Caldas, Colombia','','1530392637Test_pdf_2.pdf','true','','2018-07-05 10:54:01','2018-07-05 10:54:01')]}
+PHP Error[05-07-18 17:55:34] => {1}=>{}
+PHP Error[05-07-18 17:55:34] => {1}=>{}
+PHP Error[05-07-18 17:55:34] => {1}=>{SENTENCIA 
+ [INSERT INTO eventos (id,id_ref,name,description,date,city,address,atachments,state,img,created_at,updated_at) 
+                VALUES ('5','46','Evento test','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu','2018-07-03 16:02:41','La Dorada, Caldas, Colombia','','1530392597Test_pdf_2.pdf','false','','2018-07-05 10:54:01','2018-07-05 10:54:01')]}
+PHP Error[05-07-18 17:55:35] => {1}=>{}
+PHP Error[05-07-18 17:56:03] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[05-07-18 17:56:03] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[05-07-18 17:56:04] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[05-07-18 18:03:21] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[05-07-18 18:03:22] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[05-07-18 18:03:23] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[05-07-18 18:04:58] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[05-07-18 18:05:00] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[05-07-18 18:05:01] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[05-07-18 18:14:41] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[05-07-18 18:16:02] => {1}=>{SELECT documento FROM participantes WHERE documento = '12356'}
+PHP Error[05-07-18 18:17:38] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[05-07-18 18:20:13] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[05-07-18 18:21:54] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[05-07-18 18:23:54] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[05-07-18 18:23:54] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[05-07-18 18:23:55] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[05-07-18 18:33:38] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[05-07-18 18:33:38] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[05-07-18 18:33:40] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[05-07-18 18:37:03] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[05-07-18 18:37:03] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[05-07-18 18:37:04] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[05-07-18 18:38:38] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[05-07-18 18:38:38] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[05-07-18 18:38:39] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[05-07-18 18:41:54] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[05-07-18 18:41:54] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[05-07-18 18:41:55] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[05-07-18 18:45:31] => {1}=>{SELECT participantes.id,participantes.pri_nombre,participantes.seg_nombre,participantes.pri_apellido,participantes.seg_apellido FROM participantes INNER JOIN detalle_participantes ON participantes.documento = detalle_participantes.user_id WHERE participantes.estado_registro = 'participando' AND detalle_participantes.event_id = '6' }
+PHP Error[05-07-18 18:46:29] => {1}=>{SELECT documento FROM participantes WHERE documento = '444444444'}
+PHP Error[05-07-18 18:56:43] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[05-07-18 18:56:43] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[05-07-18 18:56:44] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
