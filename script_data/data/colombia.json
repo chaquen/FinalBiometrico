@@ -3,7 +3,7 @@
         "id":0,
         "departamento":"Amazonas",
         "ciudades":[  
-            "selecciona una opci\u00f3",
+            "selecciona una opci\u00f3n",
             "Puerto Nari\u00f1o",
             "Leticia"
         ]
@@ -1047,6 +1047,7 @@
         "id":25,
         "departamento":"San Andr\u00e9s y Providencia",
         "ciudades":[  
+            "selecciona una opci\u00f3n",
             "Providencia y Santa Catalina Islas",
             "San Andr\u00e9s"
         ]
