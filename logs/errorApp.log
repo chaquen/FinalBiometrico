@@ -460,3 +460,24 @@ PHP Error[04-07-18 18:25:02] => {1}=>{Table 'db_ong_local.users' doesn't existSE
 PHP Error[04-07-18 18:25:02] => {1}=>{SENTENCIA 
  [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
                 VALUES ('','','','','','','')]}
+PHP Error[06-07-18 17:20:02] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:17] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:29:58] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:30:11] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:31:45] => {1}=>{Unknown column 'estado_evento' in 'where clause'SENTENCIA 
+[UPDATE eventos SET estado_evento = 'suspendido' WHERE estado_evento = 'activo']}
+PHP Error[06-07-18 17:31:46] => {1}=>{Unknown column 'estado_evento' in 'field list'SENTENCIA 
+[UPDATE eventos SET 
+                                                        
+                                                        estado_evento = 'activo'
+                                                        WHERE id = '2']}
+PHP Error[06-07-18 17:33:59] => {1}=>{}
+PHP Error[06-07-18 17:34:03] => {1}=>{}
+PHP Error[06-07-18 17:34:07] => {1}=>{}
+PHP Error[06-07-18 17:34:11] => {1}=>{}
+PHP Error[06-07-18 17:34:15] => {1}=>{}
