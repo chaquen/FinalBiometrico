@@ -460,6 +460,29 @@ PHP Error[04-07-18 18:25:02] => {1}=>{Table 'db_ong_local.users' doesn't existSE
 PHP Error[04-07-18 18:25:02] => {1}=>{SENTENCIA 
  [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
                 VALUES ('','','','','','','')]}
+<<<<<<< HEAD
+PHP Error[06-07-18 17:20:02] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:17] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:29:58] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:30:11] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[06-07-18 17:31:45] => {1}=>{Unknown column 'estado_evento' in 'where clause'SENTENCIA 
+[UPDATE eventos SET estado_evento = 'suspendido' WHERE estado_evento = 'activo']}
+PHP Error[06-07-18 17:31:46] => {1}=>{Unknown column 'estado_evento' in 'field list'SENTENCIA 
+[UPDATE eventos SET 
+                                                        
+                                                        estado_evento = 'activo'
+                                                        WHERE id = '2']}
+PHP Error[06-07-18 17:33:59] => {1}=>{}
+PHP Error[06-07-18 17:34:03] => {1}=>{}
+PHP Error[06-07-18 17:34:07] => {1}=>{}
+PHP Error[06-07-18 17:34:11] => {1}=>{}
+PHP Error[06-07-18 17:34:15] => {1}=>{}
+=======
 PHP Error[05-07-18 17:50:35] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[05-07-18 17:50:36] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
 PHP Error[05-07-18 17:50:37] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
@@ -516,6 +539,7 @@ PHP Error[05-07-18 18:46:29] => {1}=>{SELECT documento FROM participantes WHERE 
 PHP Error[05-07-18 18:56:43] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[05-07-18 18:56:43] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
 PHP Error[05-07-18 18:56:44] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+<<<<<<< HEAD
 PHP Error[06-07-18 17:25:40] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[06-07-18 17:25:40] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
 PHP Error[06-07-18 17:27:09] => {1}=>{SELECT * FROM users WHERE  id = 46}
@@ -528,3 +552,6 @@ PHP Error[06-07-18 17:40:21] => {1}=>{SELECT id,estado_registro,pri_apellido,seg
 PHP Error[06-07-18 17:40:24] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
 PHP Error[06-07-18 17:50:15] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[06-07-18 17:50:15] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+=======
+>>>>>>> 02e204859a6002e0400fd724ef72fa0f6f84642c
+>>>>>>> 7396fdfac0807118aefaeb84a77ba7d287d0b396
