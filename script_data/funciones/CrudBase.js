@@ -230,7 +230,7 @@ function editarDatoArchivo(url,dat,archivo,callback,id_formulario){
    
 }
 
-function registrarDatoOff(url,evento_server,datos,funcion_despues,formulario){
+function registrarDatoOff(url,evento_server,datos,funcion_despues,formulario,error){
     
     
     if(datos){
@@ -244,7 +244,7 @@ function registrarDatoOff(url,evento_server,datos,funcion_despues,formulario){
                     limpiarFormulario(formulario);
                 }  
             
-        }).fail(function(){});
+        }).fail(error);
     
     }else{
         mostrarMensaje({mensaje:"por favor ingresa valores ☻"});

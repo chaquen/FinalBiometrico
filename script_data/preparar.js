@@ -15,7 +15,11 @@ function iniciar_menu_preparar(){
 			    }
 			    
 			    //mostrarMensaje(msn); 
-			});
+			},function(jqXHR, textStatus, errorThrown){
+                            console.log(jqXHR);
+                            console.log(textStatus);
+                            console.log(errorThrown);
+                        });
 	});
 	agregarEvento("btnListo","click",function(){
 		$('#listo').fadeOut();

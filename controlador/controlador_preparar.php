@@ -35,7 +35,8 @@ $da=json_decode($remote_server_output);
 
 //var_dump($da);
 //
-$res=$user->crear_registro($da->usuario);
+if($da!=NULL){
+    $res=$user->crear_registro($da->usuario);
 //var_dump($res);
 
 	$i=0;
@@ -148,6 +149,9 @@ $res=$user->crear_registro($da->usuario);
 
 
 
+}else{
+    print_r($remote_server_output);
+}
 
 
 //REGISTRAR EN BD

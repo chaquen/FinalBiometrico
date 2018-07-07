@@ -95,7 +95,7 @@ function iniciar_evento_participantes(){
                 }
             }
             console.log(dep2)
-            crear_data_list("lista_datos_dep_z",dep2,"id","departamento");  
+            crear_data_list("lista_datos_dep_2",dep2,"id","departamento");  
          }
             
     });
