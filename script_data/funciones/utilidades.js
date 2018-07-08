@@ -530,7 +530,7 @@ function crear_data_list_tres(id_data_list,datos,id,valor){
   
   console.log(sel);
 }
-function crear_data_list_dos(id_data_list,datos){
+function crear_data_list_dos(id_data_list,datos,id,valor){
   var existe=false;
   var sel=document.getElementById(id_data_list);
           sel.innerHTML="";
@@ -540,16 +540,26 @@ function crear_data_list_dos(id_data_list,datos){
           sel.appendChild(opt); 
           
 
-     for(var l in datos[0]){
-      console.log(datos[0][l]);
-     
-      
-        opt.innerHTML=datos[0]  [l];
+  Object.keys(datos).forEach(function(clave) {
+
+    var mis_llaves=Object.keys(datos[clave]);
+    
+    for(var l in mis_llaves){
+
+      if(existe==false && mis_llaves[l]==id){
+        var opt=document.createElement("option");
+        opt.setAttribute("value",datos[clave][id]);
+        existe=true;
+      }
+      if(existe==true && mis_llaves[l]==valor){
+        opt.innerHTML=datos[clave][valor];
         sel.appendChild(opt); 
         existe=false;
         var opt=document.createElement("option");
-      
+      }
     }
+ });
+
   console.log(sel);
 }
 /*
@@ -617,6 +627,53 @@ function crear_select_2(id_select,datos,id,valor){
           var opt=document.createElement("option");
           opt.innerHTML="Reporte general";
           opt.setAttribute("value","G");
+          sel.appendChild(opt); 
+          
+       
+        Object.keys(datos).forEach(function(clave) {
+          console.log(clave);
+          console.log(Object.keys(datos[clave]));
+         
+         
+          var mis_llaves=Object.keys(datos[clave]);
+          
+          for(var l in mis_llaves){
+
+            if(existe==false && mis_llaves[l]==id){
+              console.log(mis_llaves[l]);
+              console.log(datos[clave][id]);
+              var opt=document.createElement("option");
+              opt.setAttribute("value",datos[clave][id]);
+              existe=true;
+            }
+              //console.log("-"+mis_llaves[l]);
+              //console.log("->"+valor);
+            if(existe==true && mis_llaves[l]==valor){
+              //console.log(mis_llaves[l]);
+              //console.log(datos[clave][valor]);
+              //console.log(mis_llaves[l]);
+              //console.log(datos[clave][valor]);
+              opt.innerHTML=datos[clave][valor];
+              sel.appendChild(opt); 
+              existe=false;
+              var opt=document.createElement("option");
+            }
+          }
+       });
+
+        console.log(sel);
+  }
+}
+function crear_select_3(id_select,datos,id,valor,prim_item,pri_value){
+    
+  var existe=false;
+   var sel=document.getElementById(id_select);
+  if(sel!=null){
+
+          sel.innerHTML="";
+          var opt=document.createElement("option");
+          opt.innerHTML=prim_item;
+          opt.setAttribute("value",pri_value);
           sel.appendChild(opt); 
           
        
@@ -862,3 +919,123 @@ $.fn.serializarFormulario = function()
     
     
 }
+$.fn.serializarFormulario2 = function()
+      {
+      var ndata_form={
+        tipo_doc:"",
+        edad:"",
+        genero:"",
+        zonas:"",
+        escolaridad:""
+
+      }; 
+
+      var ar=[];
+      var i=0;
+      for(var t in this[0].tipo_doc){
+        console.log(this[0].tipo_doc[t]);
+          if(this[0].tipo_doc[0].value=="0" && this[0].tipo_doc[0].checked && this[0].tipo_doc[t].value != undefined ){
+                if(this[0].tipo_doc[t].value!="0"){
+                  ar[i++]=this[0].tipo_doc[t].value;
+                }
+              
+            
+          }else{
+            if(this[0].tipo_doc[t].checked && this[0].tipo_doc[t].value != undefined){
+              ar[i++]=this[0].tipo_doc[t].value;
+            }
+          } 
+
+
+
+          
+      }
+      ndata_form.tipo_doc=ar; 
+
+      var ar=[];
+      var i=0;
+      for(var t in this[0].edad){
+        console.log(this[0].edad[t]);
+          if(this[0].edad[0].value=="0" && this[0].edad[0].checked && this[0].edad[t].value != undefined ){
+                if(this[0].edad[t].value!="0"){
+                  ar[i++]=this[0].edad[t].value;
+                }
+              
+            
+          }else{
+            if(this[0].edad[t].checked && this[0].edad[t].value != undefined){
+              ar[i++]=this[0].edad[t].value;
+            }
+          } 
+
+
+
+          
+      } 
+      ndata_form.edad=ar;   
+
+      var ar=[];
+      var i=0;
+      for(var t in this[0].genero){
+        console.log(this[0].genero[t]);
+          if(this[0].genero[0].value=="0" && this[0].genero[0].checked && this[0].genero[t].value != undefined ){
+                if(this[0].genero[t].value!="0"){
+                  ar[i++]=this[0].genero[t].value;
+                }
+              
+            
+          }else{
+            if(this[0].genero[t].checked && this[0].genero[t].value != undefined){
+              ar[i++]=this[0].genero[t].value;
+            }
+          } 
+
+
+
+          
+      } 
+      ndata_form.genero=ar;   
+      var ar=[];
+      var i=0;
+      for(var t in this[0].zonas){
+        console.log(this[0].zonas[t]);
+          if(this[0].zonas[0].value=="0" && this[0].zonas[0].checked && this[0].zonas[t].value != undefined ){
+                if(this[0].zonas[t].value!="0"){
+                  ar[i++]=this[0].zonas[t].value;
+                }
+              
+            
+          }else{
+            if(this[0].zonas[t].checked && this[0].zonas[t].value != undefined){
+              ar[i++]=this[0].zonas[t].value;
+            }
+          } 
+
+
+
+          
+      } 
+      ndata_form.zonas=ar;  
+      var ar=[];
+      var i=0;
+      for(var t in this[0].escolaridad){
+        console.log(this[0].escolaridad[t]);
+          if(this[0].escolaridad[0].value=="0" && this[0].escolaridad[0].checked && this[0].escolaridad[t].value != undefined ){
+                if(this[0].escolaridad[t].value!="0"){
+                  ar[i++]=this[0].escolaridad[t].value;
+                }
+              
+            
+          }else{
+            if(this[0].escolaridad[t].checked && this[0].escolaridad[t].value != undefined){
+              ar[i++]=this[0].escolaridad[t].value;
+            }
+          } 
+
+
+
+          
+      } 
+      ndata_form.escolaridad=ar;  
+      return ndata_form;
+};
