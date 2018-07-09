@@ -1,8 +1,10 @@
 $(document).ready(function(){
 	$('#btnGeneraReporte').click(function(){
+		$('.encabezado, #menuAdmin, .contenido').fadeOut('fast');
 		$('#reporteGenerado').show('scale');
 	});
 	$('.salir').click(function(){
-		$('.mascara').toggle('scale');
+
+		$('#reporteGenerado').toggle('scale');
 	});
 });

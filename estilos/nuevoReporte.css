@@ -297,19 +297,16 @@ h5 {
     z-index: 9999;
     overflow-x: hidden;
 }
-.vistaReporte {
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
-    display table;
-    background-color: white;
-    overflow-x: hidden;
-}
 .accion {
     clear: both;
     padding-top: 20px;
     width: 100%;
 }
+.btnImpresionRepor{
+    width: 100%;
+    clear: both;
+    position: fixed;
+} 
 
 .contenedorGraficos {
     width: 90%;
@@ -323,6 +320,9 @@ h5 {
     margin: auto;
     display: table;
 }
+.vistaReportes {
+    padding-top: 100px;
+}
 .barraHor {
     width: 90%;
     margin: auto;
@@ -334,13 +334,21 @@ h5 {
     height: 100px;
     border: 1px solid red;
 }
-
+.impresion {
+    width: 90%;
+    margin: auto;
+    clear: both;
+    border: 1px solid red;
+    padding-bottom: 20px;
+}
+#reporteGenerado {
+    display: none;
+}
 @media print {
     #menuAdmin, .contenido, #divExportar {
         display: none;
     }
-    .mascara {
+    .btnImpresionRepor {
         display: none;
-    }
-    
+    }    
 }

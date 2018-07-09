@@ -345,17 +345,18 @@
             </form>
         </div>
 
-
-
          <!--resultados-->
-         <div class="mascara" id="reporteGenerado">
-            <input type="button" value="Cerrar Informe" class="salir">
-            <input id="btnGenerarPdf"  type="button" value="Exportar PDF">
-            <input id="btnGenerarExcel" type="button"  value="Exportar Excel">
-            <a id="aExpor" target="_blank"></a>
+         <div id="reporteGenerado">
             
             <!--Contenedor de Graficos-->
             <div class="contenedorGraficos">
+                <div class="btnImpresionRepor">
+                    <input type="button" value="Cerrar Informe" class="salir">
+                    <input id="btnGenerarPdf"  type="button" value="Exportar PDF">
+                    <input id="btnGenerarExcel" type="button"  value="Exportar Excel">
+                    <a id="aExpor" target="_blank"></a>
+                </div>
+
                 <!--Grafico Reporte General-->
                 <div class="vistaReporte">
                     <h5 class="tituloRepor">Reporte General</h5>
@@ -432,81 +433,9 @@
         </div>   
         <!-- Fin resultados-->
 
-        <!--Impresion-->
-        <!--Division para impresion-->
-            <div class="contenedorGraficos">
-                <!--Grafico Reporte General-->
-                <div class="vistaReporte">
-                    <h5>Reporte General</h5>
-                    <div id="divReporteGeneral">
-                        <table id="tblListaGeneral" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                        </table>
-                    </div>
-                </div>
+        
 
-                <!--Grafico Reporte de Genero-->
-                <div id="divGenero" class="divisionReportes">
-                    <h5>Reporte de Genero</h5>
-                     <div id="barchart_material_gen" class="barraHor"></div>
-                     <div id="piechart_material_gen"></div>
-                </div>
 
-                <!--Grafico Reporte de Edades-->
-                <div id="divEdades">
-                    <h5>Reporte de Edades</h5>
-                     <div id="barchart_material_eda" class="barraHor"></div>
-                     <div id="piechart_material_eda" ></div>
-                </div>
-
-                <!--Grafico Reporte Capacidades Especiales-->
-
-                
-                <div id="divCapDife">
-                    <h5>Reporte por Capacidades Especiales</h5>
-                     <div id="barchart_material_cap_dif" class="barraHor"></div>
-                     <div id="piechart_material_cap_dif" ></div>
-                </div>
-
-                <!--Graficos de Ciudad y Departamento de nacimiento-->
-
-                <div id="divCiuNac">
-                    <h5>Reportes por Ubicacion de Nacimiento</h5>
-                     <div id="barchart_material_ciu" class="barraHor"></div>
-                     <div id="piechart_material_ciu" ></div>
-                </div>
-                 <div id="divDepNac">
-                       <h5>Reportes por Departamento de Nacimiento</h5>   
-                     <div id="barchart_material_dep_nac" class="barraHor"></div>
-                     <div id="piechart_material_dep_nac" ></div>
-                </div>
-
-                <!--Graficos Reporte Proceso PDP-->
-
-                <div id="divOrga">
-                    <h5>Reporte Proceso PDP</h5>
-                     <div id="barchart_material_orga" class="barraHor"></div>
-                    <div id="piechart_material_orga" ></div>
-                </div>
-                <div id="divPro">
-                     <div id="barchart_material_proceso" class="barraHor"></div>
-                     <div id="piechart_material_proceso" ></div>
-                </div>
-
-                <!--Grafico por Escolaridad-->
-                <div id="divEsco">
-                    <h5>Reporte Escolaridad</h5>
-                     <div id="barchart_material_esco" class="barraHor"></div>
-                     <div id="piechart_material_esco" ></div>
-                </div>
-
-                <!--Grafico Reporte Etinas-->
-                <div id="divEtnia">
-                    <h5>Reporte Etnia</h5>
-                     <div id="barchart_material_etnia" class="barraHor"></div>
-                     <div id="piechart_material_etnia" ></div>
-                </div>
-                
-            </div>
 
   </body>
 </html>
