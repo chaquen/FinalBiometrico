@@ -4,6 +4,7 @@ var dep2=[];
 var fecha_evento="";
 var lugar_evento="";
 var nom_reporte;
+
 var todo_esco;
 var todo_genero;
 var todo_proceso;
@@ -64,393 +65,12 @@ function iniciar_reportes(){
 		if(datos.escolaridad!=undefined){
 			datos.escolaridad=datos2.escolaridad;
 		}
-				
+					
 		nom_reporte=document.getElementById("selEventos").options[document.getElementById("selEventos").selectedIndex].innerHTML;	
 		
 
 		switch(datos.tipo_reporte){
-			case "TipoTortasyBarras":
-				registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
-						console.log(rs);
-						if(rs.respuesta){
-							
-							
-							dibujar_tabla(rs.datos);
-						}				
-
-				},"");
-				//tipo torta
-				registrarDato("reportes_general",{datos,id_evento:document.getElementById("selEventos").value},function(rs){
-						console.log(rs);
-						console.log(document.getElementById("divReporteGeneral"));
-						if(rs.respuesta){
-							if(Object.keys(rs.datos).length>0){
-								document.getElementById("divReporteGeneral").style.display="";
-								dibujar_tabla(rs.datos);	
-							}else{
-								document.getElementById("divReporteGeneral").style.display="none";
-							}
-
-							
-
-							if(Object.keys(rs.datos_escolaridad).length>0){
-								$('#piechart_material_esco').fadeIn();
-                                                                $('#barchart_material_esco').fadeOut();
-								var arr=[];
-                                                                arr.push("Participantes");
-                                                                arr.push("Tipo");
-								var cabza=[];
-								
-								cabza.push(arr);
-
-								for(var v in rs.datos_escolaridad){
-                                                                        var arr=[];
-									arr.push( rs.datos_escolaridad[v].escolaridad);	
-									arr.push(Number(rs.datos_escolaridad[v].cuantos_por_escolaridad));	
-                                                                        cabza.push(arr);
-								}
-                                                                console.log(cabza);   
-								todo_esco_pie=cabza;
-								
-							 	//google.charts.load('current', {'packages':['bar']});
-						      	//google.charts.setOnLoadCallback(drawChartes);
-
-							      
-							}
-
-							if(Object.keys(rs.datos_cap_dife).length>0){
-								$('#piechart_material_cap_dif').fadeIn();
-                                                                $('#barchart_material_cap_dif').fadeOut();
-								var cabza=[];
-                                                                var arr=[];
-								arr.push("Participantes");
-								arr.push("Capacidades Diferentes");
-								//cabza.push("participantes");
-
-								for(var v in rs.datos_cap_dife){
-                                                                        var arr=[];
-									arr.push( rs.datos_cap_dife[v].cap_dife);	
-									arr.push(Number(rs.datos_cap_dife[v].cuantos_por_cap_dife));	
-                                                                        cabza.push(arr);
-								}
-								todo_cap_dife_pie=cabza;
-								
-							 	
-							}
-
-							if(Object.keys(rs.datos_ciu_nac).length>0){
-								$('#barchart_material_ciu').fadeOut();
-                                                                $('#piechart_material_ciu').fadeIn();
-								var cabza=[];
-                                                                var arr=[];
-								arr.push("Participantes");
-								arr.push("Ciudad Nacimiento");
-								//cabza.push("participantes");
-
-								for(v in rs.datos_ciu_nac){
-                                                                        var arr=[];
-									arr.push( rs.datos_ciu_nac[v].ciud_nacimiento);	
-									arr.push(Number(rs.datos_ciu_nac[v].cuantos_por_ciud_nacimiento));	
-                                                                        cabza.push(arr);
-								}
-								todo_ciu_nac_pie=cabza;
-								
-
-							}
-							if(Object.keys(rs.datos_dep_nac).length>0){
-								$('#barchart_material_dep_nac').fadeOut();
-                                                                $('#piechart_material_dep_nac').fadeIn();
-								var arr=[];
-								var cabza=[];
-                                                                arr.push("Participantes");
-								arr.push("Departamento Nacimiento");
-								//cabza.push("participantes");
-
-								for(var v in rs.datos_dep_nac){
-                                                                        var arr=[];
-									arr.push( rs.datos_ciu_nac[v].datos_dep_nac);	
-									arr.push(Number(rs.datos_ciu_nac[v].dep_nacimiento));	
-                                                                        cabza.push(arr);
-								}
-							    todo_dep_nac_pie=cabza;
-							
-							}
-
-							if(Object.keys(rs.datos_edaddes).length>0){
-								$('#barchart_material_eda').fadeOut();
-                                                                $('#piechart_material_eda').fadeIn();
-								var cabza=[];
-                                                                var arr=[];
-								arr.push("Participantes");
-								arr.push("Edad");
-								//cabza.push("participantes");
-
-								for(var v in rs.datos_edaddes){
-                                                                        var arr=[];
-									arr.push( rs.datos_edaddes[v].edad);	
-									arr.push(Number(rs.datos_edaddes[v].cuentos_por_edad));	
-                                                                        cabza.push(arr);
-								}
-								todo_edad_pie=cabza;
-								
-							}
-							if(Object.keys(rs.datos_genero).length>0){
-								$('#barchart_material_gen').fadeOut();
-                                                                $('#piechart_material_gen').fadeIn();
-								var cabza=[];
-                                                                var arr=[];
-								arr.push("Participantes");
-								arr.push("Genero");
-								cabza.push(arr);
-
-								for(var v in rs.datos_genero){
-                                                                        var arr=[];
-									arr.push( rs.datos_genero[v].genero);	
-									arr.push(Number(rs.datos_genero[v].cuentos_por_genero));	
-                                                                        cabza.push(arr);
-								}
-								todo_genero_pie=cabza;
-                                                                console.log(todo_genero_pie);
-							}
-
-							
-							if(Object.keys(rs.datos_etnia).length>0){
-								$('#barchart_material_etnia').fadeOut();
-                                                                $('#piechart_material_etnia').fadeIn();
-								var cabza=[];
-                                                                var arr=[];
-								arr.push("Participantes");
-								arr.push("Etnia");
-								cabza.push(arr);
-
-								for(v in rs.datos_etnia){
-                                                                        var arr=[];
-									arr.push( rs.datos_etnia[v].etnia);	
-									arr.push(Number(rs.datos_etnia[v].cuantos_por_etnia));	
-                                                                        cabza.push(arr);
-								}
-								todo_etnia_pie=cabza;
-								
-							}
-							
-
-							if(Object.keys(rs.datos_organizacion).length>0){
-								$('#barchart_material_orga').fadeOut();
-                                                                $('#piechart_material_orga').fadeIn();
-								var cabza=[];
-                                                                var arr=[];
-								arr.push("Participantes");
-								arr.push("Organizacion");
-								cabza.push(arr);
-
-								for(var v in rs.datos_organizacion){
-                                                                        var arr=[];
-									arr.push( rs.datos_organizacion[v].organizacion);	
-									arr.push(Number(rs.datos_organizacion[v].cuantos_por_organizacion));	
-                                                                        cabza.push(arr);
-								}
-								todo_orga_pie=cabza;
-								
-							}
-							if(Object.keys(rs.datos_proceso).length>0){
-								$('#barchart_material_proceso').fadeOut();
-                                                                $('#piechart_material_proceso').fadeIn();
-								var cabza=[];
-                                                                var arr=[];
-								arr.push("Participantes");
-								arr.push("Proceso");
-								cabza.push(arr);
-
-								for(var v in rs.datos_organizacion){
-                                                                        var arr=[];
-                                                                        arr.push( rs.datos_organizacion[v].proceso);	
-									arr.push(Number(rs.datos_organizacion[v].cuantos_por_proceso));	
-                                                                        cabza.push(arr);
-                                                                        
-								}
-								todo_proceso_pie=cabza;
-							}	
-							 	
-
-							google.charts.load('current', {'packages':['corechart']});
-                                                        google.charts.setOnLoadCallback(dibujar_reporte_torta);
-
-							
-						}				
-
-				},"");	
-				//Tipo Barra
-				registrarDato("reportes_general",{datos,id_evento:document.getElementById("selEventos").value},function(rs){
-						console.log(rs);
-						console.log(document.getElementById("divReporteGeneral"));
-						if(rs.respuesta){
-							if(Object.keys(rs.datos).length>0){
-								document.getElementById("divReporteGeneral").style.display="";
-								dibujar_tabla(rs.datos);	
-							}else{
-								document.getElementById("divReporteGeneral").style.display="none";
-							}
-
-							
-
-							if(Object.keys(rs.datos_escolaridad).length>0){
-								$('#piechart_material_esco').fadeOut();
-                                                                $('#barchart_material_esco').fadeIn();
-								var arr=[];
-								var cabza=["Participantes"];
-								var body2=["Escolaridad "];
-								//cabza.push("participantes");
-
-								for(v in rs.datos_escolaridad){
-									console.log(rs.datos_escolaridad[v]);
-									cabza.push( rs.datos_escolaridad[v].escolaridad);	
-									body2.push(Number(rs.datos_escolaridad[v].cuantos_por_escolaridad));	
-								}
-								todo_esco=[cabza,body2];
-								
-							 	//google.charts.load('current', {'packages':['bar']});
-						      	//google.charts.setOnLoadCallback(drawChartes);
-
-							      
-							}
-
-							if(Object.keys(rs.datos_cap_dife).length>0){
-								$('#piechart_material_cap_dif').fadeOut();
-                                                                $('#barchart_material_cap_dif').fadeIn();
-								var arr=[];
-								var cabza=["Participantes"];
-								var body=["Capacidades Diferentes"];
-								//cabza.push("participantes");
-
-								for(v in rs.datos_cap_dife){
-									cabza.push( rs.datos_cap_dife[v].cap_dife);	
-									body.push(Number(rs.datos_cap_dife[v].cuantos_por_cap_dife));	
-								}
-								todo_cap_dife=[cabza,body];
-								
-							 	
-							}
-
-							if(Object.keys(rs.datos_ciu_nac).length>0){
-								$('#barchart_material_ciu').fadeOut();
-                                                                $('#piechart_material_ciu').fadeIn();
-								var arr=[];
-								var cabza=["Participantes"];
-								var body=["Ciudad Nacimiento"];
-								//cabza.push("participantes");
-
-								for(v in rs.datos_ciu_nac){
-									cabza.push( rs.datos_ciu_nac[v].ciud_nacimiento);	
-									body.push(Number(rs.datos_ciu_nac[v].cuantos_por_ciud_nacimiento));	
-								}
-								todo_ciu_nac=[cabza,body];
-								
-
-							}
-							if(Object.keys(rs.datos_dep_nac).length>0){
-								$('#piechart_material_dep_nac').fadeOut();
-                                                                $('#barchart_material_dep_nac').fadeIn();
-                                                                var arr=[];
-								var cabza=["Participantes"];
-								var body=["Departamento Nacimiento"];
-								//cabza.push("participantes");
-
-								for(v in rs.datos_dep_nac){
-									cabza.push( rs.datos_ciu_nac[v].datos_dep_nac);	
-									body.push(Numnber(rs.datos_ciu_nac[v].dep_nacimiento));	
-								}
-							    todo_dep_nac=[cabza,body];
-							
-							}
-
-							if(Object.keys(rs.datos_edaddes).length>0){
-								$('#piechart_material_eda').fadeOut();
-                                                                $('#barchart_material_eda').fadeIn();
-								var arr=[];
-								var cabza=["Participantes"];
-								var body=["Edad"];
-								//cabza.push("participantes");
-
-								for(v in rs.datos_edaddes){
-									cabza.push( rs.datos_edaddes[v].edad);	
-									body.push(Number(rs.datos_edaddes[v].cuentos_por_edad));	
-								}
-								todo_edad=[cabza,body];
-								
-							}
-							if(Object.keys(rs.datos_genero).length>0){
-								$('#piechart_material_gen').fadeOut();
-                                                                $('#barchart_material_gen').fadeIn();
-                                                                var arr=[];
-								var cabza=["Participantes"];
-								var body=["Genero"];
-								//cabza.push("participantes");
-
-								for(v in rs.datos_genero){
-									cabza.push( rs.datos_genero[v].genero);	
-									body.push(Number(rs.datos_genero[v].cuentos_por_genero));	
-								}
-								todo_genero=[cabza,body];
-							
-							}
-
-							
-							if(Object.keys(rs.datos_etnia).length>0){
-								$('#piechart_material_etnia').fadeOut();
-                                                                $('#barchart_material_etnia').fadeIn();
-								var arr=[];
-								var cabza=["Participantes"];
-								var body=["Etnia"];
-								//cabza.push("participantes");
-
-								for(v in rs.datos_etnia){
-									cabza.push( rs.datos_etnia[v].etnia);	
-									body.push(Number(rs.datos_etnia[v].cuantos_por_etnia));	
-								}
-								todo_etnia=[cabza,body];
-								
-							}
-							
-
-							if(Object.keys(rs.datos_organizacion).length>0){
-								$('#piechart_material_orga').fadeOut();
-                                                                $('#barchart_material_orga').fadeIn();
-								var arr=[];
-								var cabza=["Participantes"];
-								var body=["Organizacion"];
-								//cabza.push("participantes");
-
-								for(v in rs.datos_organizacion){
-									cabza.push( rs.datos_organizacion[v].organizacion);	
-									body.push(Number(rs.datos_organizacion[v].cuantos_por_organizacion));	
-								}
-								todo_orga=[cabza,body];
-								
-							}
-							if(Object.keys(rs.datos_proceso).length>0){
-								$('#piechart_material_proceso').fadeOut();
-                                                                $('#barchart_material_proceso').fadeIn();
-								var arr=[];
-								var cabza=["Participantes"];
-								var body=["Proceso"];
-								//cabza.push("participantes");
-
-								for(v in rs.datos_organizacion){
-									cabza.push( rs.datos_organizacion[v].proceso);	
-									body.push(Number(rs.datos_organizacion[v].cuantos_por_proceso));	
-								}
-								todo_proceso=[cabza,body];
-							}	
-							 	
-
-							google.charts.load('current', {'packages':['bar']});
-                                                        google.charts.setOnLoadCallback(dibujar_grafico_reporte);
-
-							
-						}				
-
-				},"");
-				break;	
+				
 			case "TipoTortas":
 				registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
 						console.log(rs);
@@ -502,12 +122,12 @@ function iniciar_reportes(){
 
 							if(Object.keys(rs.datos_cap_dife).length>0){
 								$('#piechart_material_cap_dif').fadeIn();
-                                                                $('#barchart_material_cap_dif').fadeOut();
+                                 $('#barchart_material_cap_dif').fadeOut();
 								var cabza=[];
                                                                 var arr=[];
 								arr.push("Participantes");
 								arr.push("Capacidades Diferentes");
-								//cabza.push("participantes");
+								cabza.push(arr);
 
 								for(var v in rs.datos_cap_dife){
                                                                         var arr=[];
@@ -521,13 +141,14 @@ function iniciar_reportes(){
 							}
 
 							if(Object.keys(rs.datos_ciu_nac).length>0){
+								$('#piechart_material_ciu').fadeIn();
 								$('#barchart_material_ciu').fadeOut();
-                                                                $('#piechart_material_ciu').fadeIn();
+                                
 								var cabza=[];
                                                                 var arr=[];
 								arr.push("Participantes");
 								arr.push("Ciudad Nacimiento");
-								//cabza.push("participantes");
+								cabza.push(arr);
 
 								for(v in rs.datos_ciu_nac){
                                                                         var arr=[];
@@ -541,17 +162,17 @@ function iniciar_reportes(){
 							}
 							if(Object.keys(rs.datos_dep_nac).length>0){
 								$('#barchart_material_dep_nac').fadeOut();
-                                                                $('#piechart_material_dep_nac').fadeIn();
+                                $('#piechart_material_dep_nac').fadeIn();
 								var arr=[];
 								var cabza=[];
-                                                                arr.push("Participantes");
+                                arr.push("Participantes");
 								arr.push("Departamento Nacimiento");
-								//cabza.push("participantes");
+								cabza.push(arr);
 
 								for(var v in rs.datos_dep_nac){
                                                                         var arr=[];
-									arr.push( rs.datos_ciu_nac[v].datos_dep_nac);	
-									arr.push(Number(rs.datos_ciu_nac[v].dep_nacimiento));	
+									arr.push( rs.datos_dep_nac[v].dep_nacimiento);	
+									arr.push(Number(rs.datos_dep_nac[v].cuantos_por_dep_nacimiento));	
                                                                         cabza.push(arr);
 								}
 							    todo_dep_nac_pie=cabza;
@@ -565,7 +186,7 @@ function iniciar_reportes(){
                                                                 var arr=[];
 								arr.push("Participantes");
 								arr.push("Edad");
-								//cabza.push("participantes");
+								cabza.push(arr);
 
 								for(var v in rs.datos_edaddes){
                                                                         var arr=[];
@@ -655,7 +276,7 @@ function iniciar_reportes(){
 							 	
 
 							google.charts.load('current', {'packages':['corechart']});
-                                                        google.charts.setOnLoadCallback(dibujar_reporte_torta);
+                            google.charts.setOnLoadCallback(dibujar_reporte_torta);
 
 							
 						}				
@@ -692,7 +313,7 @@ function iniciar_reportes(){
 
 							if(Object.keys(rs.datos_escolaridad).length>0){
 								$('#piechart_material_esco').fadeOut();
-                                                                $('#barchart_material_esco').fadeIn();
+                                $('#barchart_material_esco').fadeIn();
 								var arr=[];
 								var cabza=["Participantes"];
 								var body2=["Escolaridad "];
@@ -713,7 +334,7 @@ function iniciar_reportes(){
 
 							if(Object.keys(rs.datos_cap_dife).length>0){
 								$('#piechart_material_cap_dif').fadeOut();
-                                                                $('#barchart_material_cap_dif').fadeIn();
+                                $('#barchart_material_cap_dif').fadeIn();
 								var arr=[];
 								var cabza=["Participantes"];
 								var body=["Capacidades Diferentes"];
@@ -729,8 +350,8 @@ function iniciar_reportes(){
 							}
 
 							if(Object.keys(rs.datos_ciu_nac).length>0){
-								$('#barchart_material_ciu').fadeOut();
-                                                                $('#piechart_material_ciu').fadeIn();
+								$('#piechart_material_ciu').fadeOut();
+								$('#barchart_material_ciu').fadeIn();
 								var arr=[];
 								var cabza=["Participantes"];
 								var body=["Ciudad Nacimiento"];
@@ -739,6 +360,7 @@ function iniciar_reportes(){
 								for(v in rs.datos_ciu_nac){
 									cabza.push( rs.datos_ciu_nac[v].ciud_nacimiento);	
 									body.push(Number(rs.datos_ciu_nac[v].cuantos_por_ciud_nacimiento));	
+
 								}
 								todo_ciu_nac=[cabza,body];
 								
@@ -746,15 +368,15 @@ function iniciar_reportes(){
 							}
 							if(Object.keys(rs.datos_dep_nac).length>0){
 								$('#piechart_material_dep_nac').fadeOut();
-                                                                $('#barchart_material_dep_nac').fadeIn();
+                                $('#barchart_material_dep_nac').fadeIn();
                                                                 var arr=[];
 								var cabza=["Participantes"];
 								var body=["Departamento Nacimiento"];
 								//cabza.push("participantes");
 
 								for(v in rs.datos_dep_nac){
-									cabza.push( rs.datos_ciu_nac[v].datos_dep_nac);	
-									body.push(Numnber(rs.datos_ciu_nac[v].dep_nacimiento));	
+									cabza.push( rs.datos_dep_nac[v].dep_nacimiento);	
+									body.push(Number(rs.datos_dep_nac[v].cuantos_por_dep_nacimiento));	
 								}
 							    todo_dep_nac=[cabza,body];
 							
@@ -832,9 +454,9 @@ function iniciar_reportes(){
 								var body=["Proceso"];
 								//cabza.push("participantes");
 
-								for(v in rs.datos_organizacion){
-									cabza.push( rs.datos_organizacion[v].proceso);	
-									body.push(Number(rs.datos_organizacion[v].cuantos_por_proceso));	
+								for(v in rs.datos_proceso){
+									cabza.push( rs.datos_proceso[v].proceso);	
+									body.push(Number(rs.datos_proceso[v].cuantos_por_proceso));	
 								}
 								todo_proceso=[cabza,body];
 							}	
@@ -848,12 +470,8 @@ function iniciar_reportes(){
 
 				},"");
 
-				break;			
-		}
-
-
-		if(document.getElementById("selEventos").value!="0"){
-
+				break;	
+			default:
 			registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
 						console.log(rs);
 						if(rs.respuesta){
@@ -861,10 +479,10 @@ function iniciar_reportes(){
 							dibujar_tabla(rs.datos);
 						}				
 
-			},"");
+				},"");
 		
 			
-			registrarDato("reportes_general",{datos,id_evento:document.getElementById("selEventos").value},function(rs){
+				registrarDato("reportes_general",{datos,id_evento:document.getElementById("selEventos").value},function(rs){
 						console.log(rs);
 						console.log(document.getElementById("divReporteGeneral"));
 						if(rs.respuesta){
@@ -879,7 +497,7 @@ function iniciar_reportes(){
 
 							if(Object.keys(rs.datos_escolaridad).length>0){
 								$('#piechart_material_esco').fadeIn();
-                                                                $('#barchart_material_esco').fadeOut();
+                                 $('#barchart_material_esco').fadeIn();
 								var arr=[];
                                                                 arr.push("Participantes");
                                                                 arr.push("Tipo");
@@ -904,12 +522,12 @@ function iniciar_reportes(){
 
 							if(Object.keys(rs.datos_cap_dife).length>0){
 								$('#piechart_material_cap_dif').fadeIn();
-                                                                $('#barchart_material_cap_dif').fadeOut();
+                                 $('#barchart_material_cap_dif').fadeIn();
 								var cabza=[];
                                                                 var arr=[];
 								arr.push("Participantes");
 								arr.push("Capacidades Diferentes");
-								//cabza.push("participantes");
+								cabza.push(arr);
 
 								for(var v in rs.datos_cap_dife){
                                                                         var arr=[];
@@ -923,13 +541,13 @@ function iniciar_reportes(){
 							}
 
 							if(Object.keys(rs.datos_ciu_nac).length>0){
-								$('#barchart_material_ciu').fadeOut();
-                                                                $('#piechart_material_ciu').fadeIn();
+								$('#barchart_material_ciu').fadeIn();
+                                $('#piechart_material_ciu').fadeIn();
 								var cabza=[];
                                                                 var arr=[];
 								arr.push("Participantes");
 								arr.push("Ciudad Nacimiento");
-								//cabza.push("participantes");
+								cabza.push(arr);
 
 								for(v in rs.datos_ciu_nac){
                                                                         var arr=[];
@@ -942,18 +560,18 @@ function iniciar_reportes(){
 
 							}
 							if(Object.keys(rs.datos_dep_nac).length>0){
-								$('#barchart_material_dep_nac').fadeOut();
-                                                                $('#piechart_material_dep_nac').fadeIn();
+								$('#barchart_material_dep_nac').fadeIn();
+                                $('#piechart_material_dep_nac').fadeIn();
 								var arr=[];
 								var cabza=[];
-                                                                arr.push("Participantes");
+                                arr.push("Participantes");
 								arr.push("Departamento Nacimiento");
-								//cabza.push("participantes");
+								cabza.push(arr);
 
 								for(var v in rs.datos_dep_nac){
                                                                         var arr=[];
-									arr.push( rs.datos_ciu_nac[v].datos_dep_nac);	
-									arr.push(Number(rs.datos_ciu_nac[v].dep_nacimiento));	
+									arr.push( rs.datos_dep_nac[v].dep_nacimiento);	
+									arr.push(Number(rs.datos_dep_nac[v].cuantos_por_dep_nacimiento));	
                                                                         cabza.push(arr);
 								}
 							    todo_dep_nac_pie=cabza;
@@ -961,26 +579,26 @@ function iniciar_reportes(){
 							}
 
 							if(Object.keys(rs.datos_edaddes).length>0){
-								$('#barchart_material_eda').fadeOut();
-                                                                $('#piechart_material_eda').fadeIn();
+								$('#barchart_material_eda').fadeIn();
+                                $('#piechart_material_eda').fadeIn();
 								var cabza=[];
                                                                 var arr=[];
 								arr.push("Participantes");
 								arr.push("Edad");
-								//cabza.push("participantes");
+								cabza.push(arr);
 
 								for(var v in rs.datos_edaddes){
                                                                         var arr=[];
 									arr.push( rs.datos_edaddes[v].edad);	
 									arr.push(Number(rs.datos_edaddes[v].cuentos_por_edad));	
-                                                                        cabza.push(arr);
+                                    cabza.push(arr);
 								}
 								todo_edad_pie=cabza;
 								
 							}
 							if(Object.keys(rs.datos_genero).length>0){
-								$('#barchart_material_gen').fadeOut();
-                                                                $('#piechart_material_gen').fadeIn();
+								$('#barchart_material_gen').fadeIn();
+                                $('#piechart_material_gen').fadeIn();
 								var cabza=[];
                                                                 var arr=[];
 								arr.push("Participantes");
@@ -999,7 +617,7 @@ function iniciar_reportes(){
 
 							
 							if(Object.keys(rs.datos_etnia).length>0){
-								$('#barchart_material_etnia').fadeOut();
+								$('#barchart_material_etnia').fadeIn();
                                                                 $('#piechart_material_etnia').fadeIn();
 								var cabza=[];
                                                                 var arr=[];
@@ -1019,7 +637,7 @@ function iniciar_reportes(){
 							
 
 							if(Object.keys(rs.datos_organizacion).length>0){
-								$('#barchart_material_orga').fadeOut();
+								$('#barchart_material_orga').fadeIn();
                                                                 $('#piechart_material_orga').fadeIn();
 								var cabza=[];
                                                                 var arr=[];
@@ -1037,7 +655,7 @@ function iniciar_reportes(){
 								
 							}
 							if(Object.keys(rs.datos_proceso).length>0){
-								$('#barchart_material_proceso').fadeOut();
+								$('#barchart_material_proceso').fadeIn();
                                                                 $('#piechart_material_proceso').fadeIn();
 								var cabza=[];
                                                                 var arr=[];
@@ -1057,18 +675,199 @@ function iniciar_reportes(){
 							 	
 
 							google.charts.load('current', {'packages':['corechart']});
-                                                        google.charts.setOnLoadCallback(dibujar_reporte_torta);
+                            google.charts.setOnLoadCallback(dibujar_reporte_torta);
 
 							
 						}				
 
 				},"");	
-			
-			
+			registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
+						console.log(rs);
+						if(rs.respuesta){
+							
+							
+							dibujar_tabla(rs.datos);
+						}				
 
-		}else{
-			mostrarMensaje("Por favor selecciona un evento");
+				},"");
+		
+			
+				registrarDato("reportes_general",{datos,id_evento:document.getElementById("selEventos").value},function(rs){
+						console.log(rs);
+						console.log(document.getElementById("divReporteGeneral"));
+						if(rs.respuesta){
+							if(Object.keys(rs.datos).length>0){
+								document.getElementById("divReporteGeneral").style.display="";
+								dibujar_tabla(rs.datos);	
+							}else{
+								document.getElementById("divReporteGeneral").style.display="none";
+							}
+
+							
+
+							if(Object.keys(rs.datos_escolaridad).length>0){
+								$('#piechart_material_esco').fadeIn();
+                                $('#barchart_material_esco').fadeIn();
+								var arr=[];
+								var cabza=["Participantes"];
+								var body2=["Escolaridad "];
+								//cabza.push("participantes");
+
+								for(v in rs.datos_escolaridad){
+									console.log(rs.datos_escolaridad[v]);
+									cabza.push( rs.datos_escolaridad[v].escolaridad);	
+									body2.push(Number(rs.datos_escolaridad[v].cuantos_por_escolaridad));	
+								}
+								todo_esco=[cabza,body2];
+								
+							 	//google.charts.load('current', {'packages':['bar']});
+						      	//google.charts.setOnLoadCallback(drawChartes);
+
+							      
+							}
+
+							if(Object.keys(rs.datos_cap_dife).length>0){
+								$('#piechart_material_cap_dif').fadeIn();
+                                                                $('#barchart_material_cap_dif').fadeIn();
+								var arr=[];
+								var cabza=["Participantes"];
+								var body=["Capacidades Diferentes"];
+								//cabza.push("participantes");
+
+								for(v in rs.datos_cap_dife){
+									cabza.push( rs.datos_cap_dife[v].cap_dife);	
+									body.push(Number(rs.datos_cap_dife[v].cuantos_por_cap_dife));	
+								}
+								todo_cap_dife=[cabza,body];
+								
+							 	
+							}
+
+							if(Object.keys(rs.datos_ciu_nac).length>0){
+								$('#barchart_material_ciu').fadeIn();
+                                $('#piechart_material_ciu').fadeIn();
+								var arr=[];
+								var cabza=["Participantes"];
+								var body=["Ciudad Nacimiento"];
+								//cabza.push("participantes");
+
+								for(v in rs.datos_ciu_nac){
+									cabza.push( rs.datos_ciu_nac[v].ciud_nacimiento);	
+									body.push(Number(rs.datos_ciu_nac[v].cuantos_por_ciud_nacimiento));	
+
+								}
+								todo_ciu_nac=[cabza,body];
+								
+
+							}
+							if(Object.keys(rs.datos_dep_nac).length>0){
+								$('#piechart_material_dep_nac').fadeIn();
+                                $('#barchart_material_dep_nac').fadeIn();
+                                var arr=[];
+								var cabza=["Participantes"];
+								var body=["Departamento Nacimiento"];
+								//cabza.push("participantes");
+
+								for(v in rs.datos_dep_nac){
+									cabza.push( rs.datos_dep_nac[v].dep_nacimiento);	
+									body.push(Number(rs.datos_dep_nac[v].cuantos_por_dep_nacimiento));	
+								}
+							    todo_dep_nac=[cabza,body];
+							
+							}
+
+							if(Object.keys(rs.datos_edaddes).length>0){
+								$('#piechart_material_eda').fadeIn();
+                                                                $('#barchart_material_eda').fadeIn();
+								var arr=[];
+								var cabza=["Participantes"];
+								var body=["Edad"];
+								//cabza.push("participantes");
+
+								for(v in rs.datos_edaddes){
+									cabza.push( rs.datos_edaddes[v].edad);	
+									body.push(Number(rs.datos_edaddes[v].cuentos_por_edad));	
+								}
+								todo_edad=[cabza,body];
+								
+							}
+							if(Object.keys(rs.datos_genero).length>0){
+								$('#piechart_material_gen').fadeIn();
+                                                                $('#barchart_material_gen').fadeIn();
+                                                                var arr=[];
+								var cabza=["Participantes"];
+								var body=["Genero"];
+								//cabza.push("participantes");
+
+								for(v in rs.datos_genero){
+									cabza.push( rs.datos_genero[v].genero);	
+									body.push(Number(rs.datos_genero[v].cuentos_por_genero));	
+								}
+								todo_genero=[cabza,body];
+							
+							}
+
+							
+							if(Object.keys(rs.datos_etnia).length>0){
+								$('#piechart_material_etnia').fadeIn();
+                                                                $('#barchart_material_etnia').fadeIn();
+								var arr=[];
+								var cabza=["Participantes"];
+								var body=["Etnia"];
+								//cabza.push("participantes");
+
+								for(v in rs.datos_etnia){
+									cabza.push( rs.datos_etnia[v].etnia);	
+									body.push(Number(rs.datos_etnia[v].cuantos_por_etnia));	
+								}
+								todo_etnia=[cabza,body];
+								
+							}
+							
+
+							if(Object.keys(rs.datos_organizacion).length>0){
+								$('#piechart_material_orga').fadeIn();
+                                                                $('#barchart_material_orga').fadeIn();
+								var arr=[];
+								var cabza=["Participantes"];
+								var body=["Organizacion"];
+								//cabza.push("participantes");
+
+								for(v in rs.datos_organizacion){
+									cabza.push( rs.datos_organizacion[v].organizacion);	
+									body.push(Number(rs.datos_organizacion[v].cuantos_por_organizacion));	
+								}
+								todo_orga=[cabza,body];
+								
+							}
+							if(Object.keys(rs.datos_proceso).length>0){
+								$('#piechart_material_proceso').fadeIn();
+                                                                $('#barchart_material_proceso').fadeIn();
+								var arr=[];
+								var cabza=["Participantes"];
+								var body=["Proceso"];
+								//cabza.push("participantes");
+
+								for(v in rs.datos_proceso){
+									cabza.push( rs.datos_proceso[v].proceso);	
+									body.push(Number(rs.datos_proceso[v].cuantos_por_proceso));	
+								}
+								todo_proceso=[cabza,body];
+							}	
+							 	
+
+							google.charts.load('current', {'packages':['bar']});
+                                                        google.charts.setOnLoadCallback(dibujar_grafico_reporte);
+
+							
+						}				
+
+				},"");
+				break;			
 		}
+
+
+		
 		
 	});
 	agregarEvento("txt_dep_nacimiento","keypress",function(e){        
@@ -1169,9 +968,26 @@ function iniciar_reportes(){
 	
     agregarEvento("btnGenerarExcel","click",function(){
 		if(document.getElementById("selEventos").value!="0"){
-			
+			var datos = $("#formReportes").serializarFormulario();
+			var datos2 = $("#formReportes").serializarFormulario2();
+
+			if(datos.tipo_doc!=undefined){
+				datos.tipo_doc=datos2.tipo_doc;
+			}
+			if(datos.edad!=undefined){
+				datos.edad=datos2.edad;
+			}
+			if(datos.genero!=undefined){
+				datos.genero=datos2.genero;
+			}
+			if(datos.zonas!=undefined){
+				datos.zonas=datos2.zonas;
+			}
+			if(datos.escolaridad!=undefined){
+				datos.escolaridad=datos2.escolaridad;
+			}
 			//registrarDato(globales._URL_ONLINE+"exportar_reporte_lista",{datos},function(rs){
-			registrarDato("exportar_reporte_lista",{id_evento:document.getElementById("selEventos").value},function(rs){	
+			registrarDato("exportar_reporte_lista",{id_evento:document.getElementById("selEventos").value,datos:datos},function(rs){	
 				if(rs.respuesta==true){
 					document.getElementById("aExpor").setAttribute("href",globales._URL_ONLINE+rs.direccion);
 					document.getElementById("aExpor").innerHTML="DESCARGAR REPORTE";
@@ -1319,7 +1135,7 @@ function dibujar_tabla(datos){
 }
 
 function dibujar_grafico_reporte(){
-
+ console.log("......");
 	//escolariodad
 	var data_esco = google.visualization.arrayToDataTable(
 							          todo_esco
@@ -1478,7 +1294,7 @@ function dibujar_reporte_torta(){
         console.log(todo_esco_pie);
 	var options_esoc = {
 		     
-		         title: nom_reporte,
+		         title: nom_reporte+" Escolaridad",
           		 is3D: true,
 		         };
 			        	    
@@ -1498,7 +1314,7 @@ function dibujar_reporte_torta(){
 	var data_pro = google.visualization.arrayToDataTable( todo_proceso_pie );
 
 							        var options_pro = {
-							          title: nom_reporte,
+							          title: nom_reporte+" Genero",
           							  is3D: true,
 							        };
                                                                 
@@ -1509,7 +1325,7 @@ function dibujar_reporte_torta(){
 	var data_org = google.visualization.arrayToDataTable(todo_orga_pie);
 
 							        var options_org = {
-							          title: nom_reporte,
+							          title: nom_reporte+" Organizaciones",
           							  is3D: true,
 							        };
 
@@ -1520,7 +1336,7 @@ function dibujar_reporte_torta(){
 	 var data_etnia = google.visualization.arrayToDataTable( todo_etnia_pie);
 
 							        var options_etnia = {
-							           title: nom_reporte,
+							           title: nom_reporte+" Etnias",
           							  is3D: true,
 							        };
 
@@ -1531,7 +1347,7 @@ function dibujar_reporte_torta(){
 	  var data_ed = google.visualization.arrayToDataTable(  todo_edad_pie );
 
 							        var options_ed = {
-							          title: nom_reporte,
+							          title: nom_reporte+" Edades",
           							  is3D: true,
 							        };
 
@@ -1542,7 +1358,7 @@ function dibujar_reporte_torta(){
 	var data_dep_nac = google.visualization.arrayToDataTable(todo_dep_nac_pie   );
 
 							        var options_dep_nac = {
-							           title: nom_reporte,
+							           title: nom_reporte+" Departamentos de nacimiento",
           							   is3D: true,
 							        };
 
@@ -1554,7 +1370,7 @@ function dibujar_reporte_torta(){
 	        var data_ciu_nac = google.visualization.arrayToDataTable( todo_ciu_nac_pie );
 
 							        var options_ciu_nac = {
-							           title: nom_reporte,
+							           title: nom_reporte+" Ciudad de nacimeinto",
           							   is3D: true,
 							        };
 
@@ -1565,7 +1381,7 @@ function dibujar_reporte_torta(){
 	var data_cap_dif = google.visualization.arrayToDataTable( todo_cap_dife_pie );
 
 							        var options_cap_dif = {
-							           title: nom_reporte,
+							           title: nom_reporte+" Capacidades",
           							   is3D: true,
 							        };
 
