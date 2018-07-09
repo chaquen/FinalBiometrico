@@ -130,7 +130,52 @@ class Participantes extends ModeloBaseDeDatos{
                             `tipo_registro`, 
                             `participantes`.`created_at`, 
                             `participantes`.`updated_at`
-                            FROM ".trim($this->TABLA)."" ;
+                            FROM ".trim($this->TABLA)." " ;
+        
+        
+        if($this->consultar_registros()){
+            //var_dump($this->filas);
+            return array("mensaje"=>$this->mensajeDepuracion,
+                "respuesta"=>TRUE,
+                "valores_consultados"=>$this->filas);
+        }else{
+            return array("mensaje"=>  $this->mensajeDepuracion,"respuesta"=> FALSE,"valores_consultados"=>false);
+        }
+        
+    }
+    function obtener_registro_todos_los_registros_para_sync($WHERE){
+        
+            $this->sentencia_sql="SELECT 
+                            `participantes`.`id`, 
+                            `tipo_doc`,
+                            `documento`,
+                            `lugar_exp`, 
+                            `pri_apellido`,
+                            `seg_apellido`,
+                            `pri_nombre`,
+                            `seg_nombre`, 
+                            `ciud_nacimiento`, 
+                            `dep_nacimiento`, 
+                            `fecha_nac`, 
+                            `edad`, 
+                            `genero`, 
+                            `cap_dife`, 
+                            `etnia`, 
+                            `zona`, 
+                            `municipio`, 
+                            `celular`, 
+                            `email`, 
+                            `escolaridad`, 
+                            `titulo_obt`, 
+                            `proceso`, 
+                            `organizacion`, 
+                            `huella_binaria`, 
+                            `state`, 
+                            `estado_registro`, 
+                            `tipo_registro`, 
+                            `participantes`.`created_at`, 
+                            `participantes`.`updated_at`
+                            FROM ".trim($this->TABLA)." ".$WHERE ;
         
         
         if($this->consultar_registros()){
