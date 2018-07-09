@@ -535,7 +535,7 @@ function crear_data_list_dos(id_data_list,datos,id,valor){
   var sel=document.getElementById(id_data_list);
           sel.innerHTML="";
           var opt=document.createElement("option");
-          opt.innerHTML="SELECCIONA UNA";
+          opt.innerHTML="SELECCIONA UNA OPCION";
           opt.setAttribute("value","--");
           sel.appendChild(opt); 
           
@@ -544,15 +544,16 @@ function crear_data_list_dos(id_data_list,datos,id,valor){
 
     var mis_llaves=Object.keys(datos[clave]);
     
-    for(var l in mis_llaves){
+    for(var l in datos[clave]){
+      console.log(datos[clave][l]);
+      if(existe==false && datos[clave][l]!=""){
 
-      if(existe==false && mis_llaves[l]==id){
         var opt=document.createElement("option");
-        opt.setAttribute("value",datos[clave][id]);
+        opt.setAttribute("value",datos[clave][l]);
         existe=true;
       }
-      if(existe==true && mis_llaves[l]==valor){
-        opt.innerHTML=datos[clave][valor];
+      if(existe==true && datos[clave][l]!=""){
+        opt.innerHTML=datos[clave][l];
         sel.appendChild(opt); 
         existe=false;
         var opt=document.createElement("option");

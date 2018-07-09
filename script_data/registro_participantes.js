@@ -77,6 +77,7 @@ function iniciar_evento_participantes(){
             }
 
             crear_data_list_dos("lista_datos_2",dep);
+            console.log(documento.getElemetById("lista_datos_2"));
     });
 
      agregarEvento("txt_dep_2","keypress",function(e){        
