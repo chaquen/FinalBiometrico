@@ -559,3 +559,11 @@ PHP Error[09-07-18 06:23:52] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
 PHP Error[09-07-18 06:24:35] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
 PHP Error[09-07-18 06:24:44] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[09-07-18 06:24:45] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[09-07-18 06:47:15] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 06:47:29] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 06:48:09] => {1}=>{SELECT participantes.id,participantes.pri_nombre,participantes.seg_nombre,participantes.pri_apellido,participantes.seg_apellido FROM participantes INNER JOIN detalle_participantes ON participantes.documento = detalle_participantes.user_id WHERE participantes.estado_registro = 'participando' AND detalle_participantes.event_id = '6' }
+PHP Error[09-07-18 07:03:12] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 07:04:22] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 07:04:26] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 07:05:06] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 07:05:16] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }

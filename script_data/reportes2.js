@@ -968,9 +968,26 @@ function iniciar_reportes(){
 	
     agregarEvento("btnGenerarExcel","click",function(){
 		if(document.getElementById("selEventos").value!="0"){
-			
+			var datos = $("#formReportes").serializarFormulario();
+			var datos2 = $("#formReportes").serializarFormulario2();
+
+			if(datos.tipo_doc!=undefined){
+				datos.tipo_doc=datos2.tipo_doc;
+			}
+			if(datos.edad!=undefined){
+				datos.edad=datos2.edad;
+			}
+			if(datos.genero!=undefined){
+				datos.genero=datos2.genero;
+			}
+			if(datos.zonas!=undefined){
+				datos.zonas=datos2.zonas;
+			}
+			if(datos.escolaridad!=undefined){
+				datos.escolaridad=datos2.escolaridad;
+			}
 			//registrarDato(globales._URL_ONLINE+"exportar_reporte_lista",{datos},function(rs){
-			registrarDato("exportar_reporte_lista",{id_evento:document.getElementById("selEventos").value},function(rs){	
+			registrarDato("exportar_reporte_lista",{id_evento:document.getElementById("selEventos").value,datos:datos},function(rs){	
 				if(rs.respuesta==true){
 					document.getElementById("aExpor").setAttribute("href",globales._URL_ONLINE+rs.direccion);
 					document.getElementById("aExpor").innerHTML="DESCARGAR REPORTE";

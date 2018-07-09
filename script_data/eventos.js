@@ -20,7 +20,20 @@ function iniciar_menu_eventos(){
                     
       		},"");
 
+		agregarEvento("btnRegistroUsuario","click",function(){
 
+			registrarDatoOff(globales._URL_BE+"controlador/controlador_participantes.php","valida_registro",
+							{usuario:globales._usuario},function(rs){
+
+								if(rs.respuesta){
+									location.href="registroUsuario.html?id="+rs.valores_consultados[0].id;		
+								}else{
+									mostrarMensaje("Por favor registra una huella");
+								}
+							});
+		
+
+		});
 }
 
 
