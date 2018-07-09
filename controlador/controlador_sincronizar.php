@@ -5,7 +5,7 @@ include("../datos/orm_core.php");
 $objeto= new Participantes();
 $objeto2= new Participantes();
 //$objeto->huella;
-$datos=$objeto->obtener_registro_todos_los_registros_para_sync("WHERE estado_registro = 'verificado' OR estado_registro = 'registrado'");
+$datos=$objeto->obtener_registro_todos_los_registros_para_sync("WHERE estado_registro = 'verificado' OR estado_registro = 'registrado' OR estado_registro = 'participando'");
 $datos_2=$objeto2->obtener_registro_todos_los_registros_detall_participacion();
 //var_dump($datos);
 //var_dump($datos_2);
@@ -44,7 +44,7 @@ curl_close ($ch);
 // hacemos lo que queramos con los datos recibidos
 // por ejemplo, los mostramos
 //echo "falta respuesta de servidor";
-print_r($remote_server_output);
+//print_r($remote_server_output);
 }else{
 echo json_encode(array("mensaje"=>"No registros para sincronizar","respuesta"=>true));
 }
