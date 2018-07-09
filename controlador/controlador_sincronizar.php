@@ -5,10 +5,11 @@ include("../datos/orm_core.php");
 $objeto= new Participantes();
 $objeto2= new Participantes();
 //$objeto->huella;
-$datos=$objeto->obtener_registro_todos_los_registros();
+$datos=$objeto->obtener_registro_todos_los_registros_para_sync("WHERE estado_registro = 'verificado' OR estado_registro = 'registrado'");
 $datos_2=$objeto2->obtener_registro_todos_los_registros_detall_participacion();
-	//var_dump($datos_2);
-if($datos["respuesta"]==true){
+//var_dump($datos);
+//var_dump($datos_2);
+if($datos["respuesta"]==true || $datos_2["respuesta"]==true){
 	//$datos=http_build_query(array("datos"=>array("hora_cliente"=>"00000000","peticion"=>"post","datos"=>array("a"=>1,"b"=>"2"))));
 //$datos=array("datos"=>array("hora_cliente"=>"00000000","peticion"=>"post","datos"=>array("a"=>1,"b"=>"2")));
 //var_dump($datos["valores_consultados"]);

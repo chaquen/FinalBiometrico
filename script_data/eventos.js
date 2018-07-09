@@ -20,14 +20,27 @@ function iniciar_menu_eventos(){
                     
       		},"");
 
+		agregarEvento("btnRegistroUsuario","click",function(){
 
+			registrarDatoOff(globales._URL_BE+"controlador/controlador_participantes.php","valida_registro",
+							{usuario:globales._usuario},function(rs){
+
+								if(rs.respuesta){
+									location.href="registroUsuario.html?id="+rs.valores_consultados[0].id;		
+								}else{
+									mostrarMensaje("Por favor registra una huella");
+								}
+							});
+		
+
+		});
 }
 
 
 
 agregarEventoLoad(iniciar_menu_eventos);
 function dibujar_lista_eventos(rs){
-	var lista=document.getElementById("liEventos");
+	var lista=document.getElementById("listaEvento");
 	lista.innerHTML="";
 	var tam=Object.keys(rs).length;
         console.log(tam);
@@ -46,6 +59,7 @@ function dibujar_lista_eventos(rs){
 		
 		if(rs[e].atachments!="none"){
 			var innerList=document.createElement("ul");	
+			innerList.className="listaDescargable"
 			var ilLi=document.createElement("li");
 			var inA=document.createElement("a");
 			inA.setAttribute("target","_blank");

@@ -460,7 +460,7 @@ PHP Error[04-07-18 18:25:02] => {1}=>{Table 'db_ong_local.users' doesn't existSE
 PHP Error[04-07-18 18:25:02] => {1}=>{SENTENCIA 
  [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
                 VALUES ('','','','','','','')]}
-<<<<<<< HEAD
+
 PHP Error[06-07-18 17:20:02] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
 PHP Error[06-07-18 17:20:17] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
 PHP Error[06-07-18 17:20:18] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
@@ -482,7 +482,7 @@ PHP Error[06-07-18 17:34:03] => {1}=>{}
 PHP Error[06-07-18 17:34:07] => {1}=>{}
 PHP Error[06-07-18 17:34:11] => {1}=>{}
 PHP Error[06-07-18 17:34:15] => {1}=>{}
-=======
+
 PHP Error[05-07-18 17:50:35] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[05-07-18 17:50:36] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
 PHP Error[05-07-18 17:50:37] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
@@ -539,7 +539,7 @@ PHP Error[05-07-18 18:46:29] => {1}=>{SELECT documento FROM participantes WHERE 
 PHP Error[05-07-18 18:56:43] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[05-07-18 18:56:43] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
 PHP Error[05-07-18 18:56:44] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
-<<<<<<< HEAD
+
 PHP Error[06-07-18 17:25:40] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[06-07-18 17:25:40] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
 PHP Error[06-07-18 17:27:09] => {1}=>{SELECT * FROM users WHERE  id = 46}
@@ -552,6 +552,265 @@ PHP Error[06-07-18 17:40:21] => {1}=>{SELECT id,estado_registro,pri_apellido,seg
 PHP Error[06-07-18 17:40:24] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
 PHP Error[06-07-18 17:50:15] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[06-07-18 17:50:15] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
-=======
->>>>>>> 02e204859a6002e0400fd724ef72fa0f6f84642c
->>>>>>> 7396fdfac0807118aefaeb84a77ba7d287d0b396
+
+PHP Error[09-07-18 06:23:52] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[09-07-18 06:24:35] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[09-07-18 06:24:44] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[09-07-18 06:24:45] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[09-07-18 06:47:15] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 06:47:29] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 06:48:09] => {1}=>{SELECT participantes.id,participantes.pri_nombre,participantes.seg_nombre,participantes.pri_apellido,participantes.seg_apellido FROM participantes INNER JOIN detalle_participantes ON participantes.documento = detalle_participantes.user_id WHERE participantes.estado_registro = 'participando' AND detalle_participantes.event_id = '6' }
+PHP Error[09-07-18 07:03:12] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 07:04:22] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 07:04:26] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 07:05:06] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 07:05:16] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+
+PHP Error[09-07-18 07:27:41] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[09-07-18 07:27:41] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[09-07-18 07:27:42] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[09-07-18 07:28:06] => {1}=>{SELECT participantes.id,participantes.pri_nombre,participantes.seg_nombre,participantes.pri_apellido,participantes.seg_apellido FROM participantes INNER JOIN detalle_participantes ON participantes.documento = detalle_participantes.user_id WHERE participantes.estado_registro = 'participando' AND detalle_participantes.event_id = '6' }
+PHP Error[09-07-18 07:28:06] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:09] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:12] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:15] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:18] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:21] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:24] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:27] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:30] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:33] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:36] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:39] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:42] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:45] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:48] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:51] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:54] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:28:57] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:00] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:03] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:07] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:10] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:13] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:16] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:19] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:22] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:25] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:28] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:31] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:34] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:37] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:40] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:43] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:46] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:49] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:52] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:55] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:29:58] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:01] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:04] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:07] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:10] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:13] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:16] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:19] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:22] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:25] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:28] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:31] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:34] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:37] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:40] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:43] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:46] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:49] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:52] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:55] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:30:58] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:01] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:05] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:08] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:11] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:14] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:17] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:20] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:23] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:26] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:29] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:32] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:35] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:38] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:41] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:44] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:31:47] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 07:40:51] => {1}=>{SELECT documento FROM participantes WHERE documento = '1'}
+PHP Error[09-07-18 07:41:22] => {1}=>{SELECT documento FROM participantes WHERE documento = '1111111'}
+PHP Error[09-07-18 07:44:33] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[09-07-18 08:20:13] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[09-07-18 08:20:13] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[09-07-18 08:22:38] => {1}=>{SELECT participantes.id,participantes.pri_nombre,participantes.seg_nombre,participantes.pri_apellido,participantes.seg_apellido FROM participantes INNER JOIN detalle_participantes ON participantes.documento = detalle_participantes.user_id WHERE participantes.estado_registro = 'participando' AND detalle_participantes.event_id = '6' }
+PHP Error[09-07-18 08:22:38] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 08:22:41] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 08:22:44] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 08:22:47] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 08:22:50] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 08:22:53] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 08:22:56] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 08:22:59] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[09-07-18 08:23:28] => {1}=>{SELECT 
+                            `participantes`.`id`, 
+                            `tipo_doc`,
+                            `documento`,
+                            `lugar_exp`, 
+                            `pri_apellido`,
+                            `seg_apellido`,
+                            `pri_nombre`,
+                            `seg_nombre`, 
+                            `ciud_nacimiento`, 
+                            `dep_nacimiento`, 
+                            `fecha_nac`, 
+                            `edad`, 
+                            `genero`, 
+                            `cap_dife`, 
+                            `etnia`, 
+                            `zona`, 
+                            `municipio`, 
+                            `celular`, 
+                            `email`, 
+                            `escolaridad`, 
+                            `titulo_obt`, 
+                            `proceso`, 
+                            `organizacion`, 
+                            `huella_binaria`, 
+                            `state`, 
+                            `estado_registro`, 
+                            `tipo_registro`, 
+                            `participantes`.`created_at`, 
+                            `participantes`.`updated_at`
+                            FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'registrado'}
+PHP Error[09-07-18 08:24:39] => {1}=>{SELECT 
+                            `participantes`.`id`, 
+                            `tipo_doc`,
+                            `documento`,
+                            `lugar_exp`, 
+                            `pri_apellido`,
+                            `seg_apellido`,
+                            `pri_nombre`,
+                            `seg_nombre`, 
+                            `ciud_nacimiento`, 
+                            `dep_nacimiento`, 
+                            `fecha_nac`, 
+                            `edad`, 
+                            `genero`, 
+                            `cap_dife`, 
+                            `etnia`, 
+                            `zona`, 
+                            `municipio`, 
+                            `celular`, 
+                            `email`, 
+                            `escolaridad`, 
+                            `titulo_obt`, 
+                            `proceso`, 
+                            `organizacion`, 
+                            `huella_binaria`, 
+                            `state`, 
+                            `estado_registro`, 
+                            `tipo_registro`, 
+                            `participantes`.`created_at`, 
+                            `participantes`.`updated_at`
+                            FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'registrado'}
+PHP Error[09-07-18 08:26:03] => {1}=>{SELECT 
+                            `participantes`.`id`, 
+                            `tipo_doc`,
+                            `documento`,
+                            `lugar_exp`, 
+                            `pri_apellido`,
+                            `seg_apellido`,
+                            `pri_nombre`,
+                            `seg_nombre`, 
+                            `ciud_nacimiento`, 
+                            `dep_nacimiento`, 
+                            `fecha_nac`, 
+                            `edad`, 
+                            `genero`, 
+                            `cap_dife`, 
+                            `etnia`, 
+                            `zona`, 
+                            `municipio`, 
+                            `celular`, 
+                            `email`, 
+                            `escolaridad`, 
+                            `titulo_obt`, 
+                            `proceso`, 
+                            `organizacion`, 
+                            `huella_binaria`, 
+                            `state`, 
+                            `estado_registro`, 
+                            `tipo_registro`, 
+                            `participantes`.`created_at`, 
+                            `participantes`.`updated_at`
+                            FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'registrado'}
+PHP Error[09-07-18 08:29:03] => {1}=>{SELECT 
+                            `participantes`.`id`, 
+                            `tipo_doc`,
+                            `documento`,
+                            `lugar_exp`, 
+                            `pri_apellido`,
+                            `seg_apellido`,
+                            `pri_nombre`,
+                            `seg_nombre`, 
+                            `ciud_nacimiento`, 
+                            `dep_nacimiento`, 
+                            `fecha_nac`, 
+                            `edad`, 
+                            `genero`, 
+                            `cap_dife`, 
+                            `etnia`, 
+                            `zona`, 
+                            `municipio`, 
+                            `celular`, 
+                            `email`, 
+                            `escolaridad`, 
+                            `titulo_obt`, 
+                            `proceso`, 
+                            `organizacion`, 
+                            `huella_binaria`, 
+                            `state`, 
+                            `estado_registro`, 
+                            `tipo_registro`, 
+                            `participantes`.`created_at`, 
+                            `participantes`.`updated_at`
+                            FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'registrado'}
+PHP Error[09-07-18 08:29:20] => {1}=>{SELECT 
+                            `participantes`.`id`, 
+                            `tipo_doc`,
+                            `documento`,
+                            `lugar_exp`, 
+                            `pri_apellido`,
+                            `seg_apellido`,
+                            `pri_nombre`,
+                            `seg_nombre`, 
+                            `ciud_nacimiento`, 
+                            `dep_nacimiento`, 
+                            `fecha_nac`, 
+                            `edad`, 
+                            `genero`, 
+                            `cap_dife`, 
+                            `etnia`, 
+                            `zona`, 
+                            `municipio`, 
+                            `celular`, 
+                            `email`, 
+                            `escolaridad`, 
+                            `titulo_obt`, 
+                            `proceso`, 
+                            `organizacion`, 
+                            `huella_binaria`, 
+                            `state`, 
+                            `estado_registro`, 
+                            `tipo_registro`, 
+                            `participantes`.`created_at`, 
+                            `participantes`.`updated_at`
+                            FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'registrado'}
+
