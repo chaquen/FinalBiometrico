@@ -999,3 +999,4 @@ PHP Error[09-07-18 20:26:28] => {1}=>{SELECT
                             FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'registrado'}
 PHP Error[09-07-18 20:26:28] => {1}=>{SELECT 
                              * FROM detalle_participantes}
+PHP Error[09-07-18 22:33:36] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
