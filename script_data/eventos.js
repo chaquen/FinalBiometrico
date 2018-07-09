@@ -27,7 +27,7 @@ function iniciar_menu_eventos(){
 
 agregarEventoLoad(iniciar_menu_eventos);
 function dibujar_lista_eventos(rs){
-	var lista=document.getElementById("liEventos");
+	var lista=document.getElementById("listaEvento");
 	lista.innerHTML="";
 	var tam=Object.keys(rs).length;
         console.log(tam);
@@ -46,6 +46,7 @@ function dibujar_lista_eventos(rs){
 		
 		if(rs[e].atachments!="none"){
 			var innerList=document.createElement("ul");	
+			innerList.className="listaDescargable"
 			var ilLi=document.createElement("li");
 			var inA=document.createElement("a");
 			inA.setAttribute("target","_blank");

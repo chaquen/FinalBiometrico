@@ -555,3 +555,7 @@ PHP Error[06-07-18 17:50:15] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
 =======
 >>>>>>> 02e204859a6002e0400fd724ef72fa0f6f84642c
 >>>>>>> 7396fdfac0807118aefaeb84a77ba7d287d0b396
+PHP Error[09-07-18 06:23:52] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[09-07-18 06:24:35] => {1}=>{SELECT * FROM eventos WHERE id_ref = 46}
+PHP Error[09-07-18 06:24:44] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[09-07-18 06:24:45] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
