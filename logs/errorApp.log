@@ -1000,3 +1000,5 @@ PHP Error[09-07-18 20:26:28] => {1}=>{SELECT
 PHP Error[09-07-18 20:26:28] => {1}=>{SELECT 
                              * FROM detalle_participantes}
 PHP Error[09-07-18 22:33:36] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[10-07-18 00:02:18] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[10-07-18 00:02:18] => {1}=>{SELECT participantes.id,participantes.pri_nombre,participantes.seg_nombre,participantes.pri_apellido,participantes.seg_apellido FROM participantes INNER JOIN detalle_participantes ON participantes.documento = detalle_participantes.user_id WHERE participantes.estado_registro = 'participando' AND detalle_participantes.event_id = '6' }
