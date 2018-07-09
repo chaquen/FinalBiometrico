@@ -295,12 +295,13 @@ h5 {
     height: 100%;
     background-color: rgba(1,1,1,0.6);
     z-index: 9999;
+    overflow-x: hidden;
 }
 .vistaReporte {
     width: 80%;
     margin: auto;
     margin-top: 50px;
-    height: 500px;
+    display table;
     background-color: white;
     overflow-x: hidden;
 }
@@ -308,6 +309,30 @@ h5 {
     clear: both;
     padding-top: 20px;
     width: 100%;
+}
+
+.contenedorGraficos {
+    width: 90%;
+    display: table;
+    margin: auto;
+    background-color: white;
+}
+
+.divisionReportes {
+    width: 90%;
+    margin: auto;
+    display: table;
+}
+.barraHor {
+    width: 90%;
+    margin: auto;
+    display: table;
+}
+.tortas {
+    width: 90%;
+    margin: auto;
+    height: 100px;
+    border: 1px solid red;
 }
 @media print {
     #menuAdmin, .contenido, #divExportar {
