@@ -4,7 +4,7 @@ $(document).ready(function(){
 		$('#reporteGenerado').show('scale');
 	});
 	$('.salir').click(function(){
-
-		$('#reporteGenerado').toggle('scale');
+		$('#reporteGenerado').fadeOut('fast');
+		$('.encabezado, #menuAdmin, .contenido').show('scale');
 	});
 });
