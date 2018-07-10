@@ -306,6 +306,8 @@ h5 {
     width: 100%;
     clear: both;
     position: fixed;
+    z-index: 9999;
+    padding-top: 20px;
 } 
 
 .contenedorGraficos {
@@ -349,7 +351,6 @@ h5 {
         display: none;
     }
     .btnImpresionRepor {
-        background-color: white;
-        color: white;
+        display: none;
     }    
 }
