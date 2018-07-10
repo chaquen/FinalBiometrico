@@ -65,6 +65,17 @@ function iniciar_reportes(){
 		if(datos.escolaridad!=undefined){
 			datos.escolaridad=datos2.escolaridad;
 		}
+		if(datos.etnia!=undefined){
+			var va=document.getElementById("selEtnia").value;
+			console.log(va);
+			if(va=="Otro"){
+				va=document.getElementById("txt_et_otro").value;
+
+			}else if(va=="0"){
+				va=["Indígena","Negro (Afro-colombiano)","Blanco","Mestizo","Zambo"];					
+			}
+			datos.etnia=va;
+		}
 					
 		nom_reporte=document.getElementById("selEventos").options[document.getElementById("selEventos").selectedIndex].innerHTML;	
 		
@@ -77,6 +88,8 @@ function iniciar_reportes(){
 						if(rs.respuesta){
 							
 							dibujar_tabla(rs.datos);
+						}else{
+							document.getElementById("tblListaGeneral").style.display="none";
 						}				
 
 				},"");
@@ -86,6 +99,8 @@ function iniciar_reportes(){
 						console.log(rs);
 						console.log(document.getElementById("divReporteGeneral"));
 						if(rs.respuesta){
+							document.getElementById("tblListaGeneral").style.display="";
+
 							if(Object.keys(rs.datos).length>0){
 								document.getElementById("divReporteGeneral").style.display="";
 								dibujar_tabla(rs.datos);	
@@ -97,7 +112,7 @@ function iniciar_reportes(){
 
 							if(Object.keys(rs.datos_escolaridad).length>0){
 								$('#piechart_material_esco').fadeIn();
-                                                                $('#barchart_material_esco').fadeOut();
+                                $('#barchart_material_esco').fadeOut();
 								var arr=[];
                                                                 arr.push("Participantes");
                                                                 arr.push("Tipo");
@@ -257,7 +272,7 @@ function iniciar_reportes(){
 							}
 							if(Object.keys(rs.datos_proceso).length>0){
 								$('#barchart_material_proceso').fadeOut();
-                                                                $('#piechart_material_proceso').fadeIn();
+                                $('#piechart_material_proceso').fadeIn();
 								var cabza=[];
                                                                 var arr=[];
 								arr.push("Participantes");
@@ -273,12 +288,45 @@ function iniciar_reportes(){
 								}
 								todo_proceso_pie=cabza;
 							}	
-							 	
+							if(Object.keys(rs.documento).length>0){
+								document.getElementById("tblListaGeneralDoc").style.display="";
+								dibujar_tabla2(rs.documento);
+							}else{
+								document.getElementById("tblListaGeneralDoc").style.display="none";
+							} 	
+
+							if(Object.keys(rs.nombre).length>0){
+								document.getElementById("tblListaGeneralNom").style.display="";
+								dibujar_tabla3(rs.nombre);
+							}else{
+								document.getElementById("tblListaGeneralNom").style.display="none";
+							} 	
 
 							google.charts.load('current', {'packages':['corechart']});
                             google.charts.setOnLoadCallback(dibujar_reporte_torta);
 
 							
+						}else{
+							$('#piechart_material_esco').fadeOut();
+							$('#barchart_material_esco').fadeOut();
+							$('#piechart_material_cap_dif').fadeOut();
+                            $('#barchart_material_cap_dif').fadeOut();
+							$('#piechart_material_ciu').fadeOut();
+							$('#barchart_material_ciu').fadeOut();
+							$('#barchart_material_dep_nac').fadeOut();
+                            $('#piechart_material_dep_nac').fadeOut();
+							$('#barchart_material_eda').fadeOut();
+                            $('#piechart_material_eda').fadeOut();
+							$('#barchart_material_gen').fadeOut();
+                            $('#piechart_material_gen').fadeOut();
+							$('#barchart_material_etnia').fadeOut();
+                            $('#piechart_material_etnia').fadeOut();
+							$('#barchart_material_orga').fadeOut();
+                            $('#piechart_material_orga').fadeOut();
+							$('#barchart_material_proceso').fadeOut();
+                            $('#piechart_material_proceso').fadeOut();
+                            document.getElementById("tblListaGeneral").style.display="none";
+                            mostrarMensaje(rs);
 						}				
 
 				},"");	
@@ -293,6 +341,8 @@ function iniciar_reportes(){
 							
 							
 							dibujar_tabla(rs.datos);
+						}else{
+							document.getElementById("tblListaGeneral").style.display="none";
 						}				
 
 				},"");
@@ -302,6 +352,8 @@ function iniciar_reportes(){
 						console.log(rs);
 						console.log(document.getElementById("divReporteGeneral"));
 						if(rs.respuesta){
+							document.getElementById("tblListaGeneral").style.display="";
+
 							if(Object.keys(rs.datos).length>0){
 								document.getElementById("divReporteGeneral").style.display="";
 								dibujar_tabla(rs.datos);	
@@ -460,23 +512,59 @@ function iniciar_reportes(){
 								}
 								todo_proceso=[cabza,body];
 							}	
-							 	
+							if(Object.keys(rs.documento).length>0){
+								document.getElementById("tblListaGeneralDoc").style.display="";
+								dibujar_tabla2(rs.documento);
+							}else{
+								document.getElementById("tblListaGeneralDoc").style.display="none";
+							} 	
+
+							if(Object.keys(rs.nombre).length>0){
+								document.getElementById("tblListaGeneralNom").style.display="";
+								dibujar_tabla3(rs.nombre);
+							}else{
+								document.getElementById("tblListaGeneralNom").style.display="none";
+							} 	 	
 
 							google.charts.load('current', {'packages':['bar']});
-                                                        google.charts.setOnLoadCallback(dibujar_grafico_reporte);
+                            google.charts.setOnLoadCallback(dibujar_grafico_reporte);
 
 							
+						}else{
+							$('#piechart_material_esco').fadeOut();
+							$('#barchart_material_esco').fadeOut();
+							$('#piechart_material_cap_dif').fadeOut();
+                            $('#barchart_material_cap_dif').fadeOut();
+							$('#piechart_material_ciu').fadeOut();
+							$('#barchart_material_ciu').fadeOut();
+							$('#barchart_material_dep_nac').fadeOut();
+                            $('#piechart_material_dep_nac').fadeOut();
+							$('#barchart_material_eda').fadeOut();
+                            $('#piechart_material_eda').fadeOut();
+							$('#barchart_material_gen').fadeOut();
+                            $('#piechart_material_gen').fadeOut();
+							$('#barchart_material_etnia').fadeOut();
+                            $('#piechart_material_etnia').fadeOut();
+							$('#barchart_material_orga').fadeOut();
+                            $('#piechart_material_orga').fadeOut();
+							$('#barchart_material_proceso').fadeOut();
+                            $('#piechart_material_proceso').fadeOut();
+                            document.getElementById("tblListaGeneral").style.display="none";
+                            mostrarMensaje(rs);
 						}				
 
 				},"");
 
 				break;	
 			default:
-			registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
+
+				registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
 						console.log(rs);
 						if(rs.respuesta){
 							
 							dibujar_tabla(rs.datos);
+						}else{
+							document.getElementById("tblListaGeneral").style.display="none";
 						}				
 
 				},"");
@@ -486,6 +574,9 @@ function iniciar_reportes(){
 						console.log(rs);
 						console.log(document.getElementById("divReporteGeneral"));
 						if(rs.respuesta){
+
+							document.getElementById("tblListaGeneral").style.display="";
+
 							if(Object.keys(rs.datos).length>0){
 								document.getElementById("divReporteGeneral").style.display="";
 								dibujar_tabla(rs.datos);	
@@ -672,21 +763,56 @@ function iniciar_reportes(){
 								}
 								todo_proceso_pie=cabza;
 							}	
-							 	
+							if(Object.keys(rs.documento).length>0){
+								document.getElementById("tblListaGeneralDoc").style.display="";
+								dibujar_tabla2(rs.documento);
+							}else{
+								document.getElementById("tblListaGeneralDoc").style.display="none";
+							} 	
+
+							if(Object.keys(rs.nombre).length>0){
+								document.getElementById("tblListaGeneralNom").style.display="";
+								dibujar_tabla3(rs.nombre);
+							}else{
+								document.getElementById("tblListaGeneralNom").style.display="none";
+							}  	
 
 							google.charts.load('current', {'packages':['corechart']});
                             google.charts.setOnLoadCallback(dibujar_reporte_torta);
 
 							
-						}				
+						}else{
+							$('#piechart_material_esco').fadeOut();
+							$('#barchart_material_esco').fadeOut();
+							$('#piechart_material_cap_dif').fadeOut();
+                            $('#barchart_material_cap_dif').fadeOut();
+							$('#piechart_material_ciu').fadeOut();
+							$('#barchart_material_ciu').fadeOut();
+							$('#barchart_material_dep_nac').fadeOut();
+                            $('#piechart_material_dep_nac').fadeOut();
+							$('#barchart_material_eda').fadeOut();
+                            $('#piechart_material_eda').fadeOut();
+							$('#barchart_material_gen').fadeOut();
+                            $('#piechart_material_gen').fadeOut();
+							$('#barchart_material_etnia').fadeOut();
+                            $('#piechart_material_etnia').fadeOut();
+							$('#barchart_material_orga').fadeOut();
+                            $('#piechart_material_orga').fadeOut();
+							$('#barchart_material_proceso').fadeOut();
+                            $('#piechart_material_proceso').fadeOut();
+                            document.getElementById("tblListaGeneral").style.display="none";
+                            mostrarMensaje(rs);
+						}						
 
 				},"");	
-			registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
+				registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
 						console.log(rs);
 						if(rs.respuesta){
 							
 							
 							dibujar_tabla(rs.datos);
+						}else{
+							document.getElementById("tblListaGeneral").style.display="none";
 						}				
 
 				},"");
@@ -696,6 +822,8 @@ function iniciar_reportes(){
 						console.log(rs);
 						console.log(document.getElementById("divReporteGeneral"));
 						if(rs.respuesta){
+							document.getElementById("tblListaGeneral").style.display="";
+
 							if(Object.keys(rs.datos).length>0){
 								document.getElementById("divReporteGeneral").style.display="";
 								dibujar_tabla(rs.datos);	
@@ -855,12 +983,45 @@ function iniciar_reportes(){
 								todo_proceso=[cabza,body];
 							}	
 							 	
+							if(Object.keys(rs.documento).length>0){
+								document.getElementById("tblListaGeneralDoc").style.display="";
+								dibujar_tabla2(rs.documento);
+							}else{
+								document.getElementById("tblListaGeneralDoc").style.display="none";
+							} 	
+							if(Object.keys(rs.nombre).length>0){
+								document.getElementById("tblListaGeneralNom").style.display="";
+								dibujar_tabla3(rs.nombre);
+							}else{
+								document.getElementById("tblListaGeneralNom").style.display="none";
+							} 
 
 							google.charts.load('current', {'packages':['bar']});
-                                                        google.charts.setOnLoadCallback(dibujar_grafico_reporte);
+                            google.charts.setOnLoadCallback(dibujar_grafico_reporte);
 
 							
-						}				
+						}else{
+							$('#piechart_material_esco').fadeOut();
+							$('#barchart_material_esco').fadeOut();
+							$('#piechart_material_cap_dif').fadeOut();
+                            $('#barchart_material_cap_dif').fadeOut();
+							$('#piechart_material_ciu').fadeOut();
+							$('#barchart_material_ciu').fadeOut();
+							$('#barchart_material_dep_nac').fadeOut();
+                            $('#piechart_material_dep_nac').fadeOut();
+							$('#barchart_material_eda').fadeOut();
+                            $('#piechart_material_eda').fadeOut();
+							$('#barchart_material_gen').fadeOut();
+                            $('#piechart_material_gen').fadeOut();
+							$('#barchart_material_etnia').fadeOut();
+                            $('#piechart_material_etnia').fadeOut();
+							$('#barchart_material_orga').fadeOut();
+                            $('#piechart_material_orga').fadeOut();
+							$('#barchart_material_proceso').fadeOut();
+                            $('#piechart_material_proceso').fadeOut();
+                            document.getElementById("tblListaGeneral").style.display="none";
+                            mostrarMensaje(rs);
+						}						
 
 				},"");
 				break;			
@@ -1002,7 +1163,236 @@ function iniciar_reportes(){
 
 
 }
+function dibujar_tabla2(datos){
+	var tbl=document.getElementById("tblListaGeneralDoc");
+		tbl.innerHTML="";
+		var tr=document.createElement("tr");
+		
+		var td=document.createElement("td");
+		td.innerHTML="Primer Nombre";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
 
+		var td=document.createElement("td");
+		td.innerHTML="Segundo Nombre";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Primer Apellido";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Segundo Apellido";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Genero";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Ciudad de Nacimiento";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Capacidades";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Etnia";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Evento";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Fecha asistencia";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		tbl.appendChild(tr);		
+	for(var f in datos){
+		console.log(datos[f]);
+		var tr=document.createElement("tr");
+		
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].pri_nombre;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].seg_nombre;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].pri_apellido;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].seg_apellido;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+		
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].genero;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].ciud_nacimiento;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].cap_dife;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].etnia;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].name;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].updated_at;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		tbl.appendChild(tr);		
+
+	}
+}
+function dibujar_tabla3(datos){
+	var tbl=document.getElementById("tblListaGeneralNom");
+		tbl.innerHTML="";
+		var tr=document.createElement("tr");
+		
+		var td=document.createElement("td");
+		td.innerHTML="Primer Nombre";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Segundo Nombre";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Primer Apellido";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Segundo Apellido";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Genero";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Ciudad de Nacimiento";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Capacidades";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Etnia";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Evento";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML="Fecha asistencia";
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		tbl.appendChild(tr);		
+	for(var f in datos){
+		console.log(datos[f]);
+		var tr=document.createElement("tr");
+		
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].pri_nombre;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].seg_nombre;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].pri_apellido;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].seg_apellido;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+		
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].genero;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].ciud_nacimiento;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].cap_dife;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].etnia;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].name;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		var td=document.createElement("td");
+		td.innerHTML=datos[f].updated_at;
+		td.className="mdl-data-table__cell--non-numeric";
+		tr.appendChild(td);
+
+		tbl.appendChild(tr);		
+
+	}
+}
 
 
 function consultar_eventos(id){
