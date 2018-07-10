@@ -57,7 +57,7 @@
                 <ul class="identificacion">                    
                     <li>
                         <select name="tipo_doc" required>
-                            <option>--Tipo de Documento--</option>
+                            <option value="0">--Tipo de Documento--</option>
                             <option value="CC">Cedula Ciudadania</option>
                             <option value="CE">Cedula extranjera</option>
                             <option value="PP">Passaporte</option>
@@ -143,17 +143,17 @@
                     <li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         
-                            <select name="etnia" required>
+                            <select id="selEtnia" name="etnia" required>
                                 
                                     <option value="Indígena">Indígena</>
                                     <option value="Negro (Afro-colombiano)">Negro (Afro-colombiano)</>
                                     <option value="Blanco">Blanco</>
                                     <option value="Mestizo">Mestizo</>
                                     <option value="Zambo">Zambo</>
-                                    <option value="Otro ">Otro </>
+                                    <option value="Otro">Otro </>
                                 
                             </select>
-                           <input id="txt_et_otro" class="mdl-textfield__input" type="text"  > 
+                           <input id="txt_et_otro" class="mdl-textfield__input" type="text" style="display: none" > 
                         </div>    
                     </li>
                 </ul>
@@ -199,7 +199,7 @@
                 <ul class="escolaridad">
                     <li>
                         <select name="escolaridad" required>
-                            <option>--Nivel de Escolaridad--</option>
+                            <option value="0">--Nivel de Escolaridad--</option>
                             <option>Primaria</option>
                             <option>Bachillerato</option>
                             <option>Tecnico</option>

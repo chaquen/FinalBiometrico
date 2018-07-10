@@ -1001,3 +1001,19 @@ PHP Error[09-07-18 20:26:28] => {1}=>{SELECT
                              * FROM detalle_participantes}
 PHP Error[09-07-18 22:33:36] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
 PHP Error[10-07-18 01:04:48] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[10-07-18 07:00:20] => {1}=>{SELECT documento FROM participantes WHERE documento = '52525'}
+PHP Error[10-07-18 07:01:37] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[10-07-18 07:02:49] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[10-07-18 07:02:51] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[10-07-18 07:03:07] => {1}=>{SELECT documento FROM participantes WHERE documento = '1'}
+PHP Error[10-07-18 07:03:49] => {1}=>{SELECT documento FROM participantes WHERE documento = '1'}
+PHP Error[10-07-18 07:04:34] => {1}=>{SELECT documento FROM participantes WHERE documento = '0000'}
+PHP Error[10-07-18 07:06:13] => {1}=>{SELECT documento FROM participantes WHERE documento = '1'}
+PHP Error[10-07-18 07:07:11] => {1}=>{SELECT documento FROM participantes WHERE documento = '1'}
+PHP Error[10-07-18 07:08:20] => {1}=>{SELECT documento FROM participantes WHERE documento = '2222'}
+PHP Error[10-07-18 07:09:10] => {1}=>{SELECT documento FROM participantes WHERE documento = '010101'}
+PHP Error[10-07-18 07:10:48] => {1}=>{SELECT documento FROM participantes WHERE documento = '5'}
+PHP Error[10-07-18 07:12:15] => {1}=>{SELECT documento FROM participantes WHERE documento = '22222'}
+PHP Error[10-07-18 07:14:42] => {1}=>{SELECT documento FROM participantes WHERE documento = '1'}
+PHP Error[10-07-18 07:15:08] => {1}=>{SELECT documento FROM participantes WHERE documento = '5'}
+PHP Error[10-07-18 07:16:53] => {1}=>{SELECT documento FROM participantes WHERE documento = '555555'}

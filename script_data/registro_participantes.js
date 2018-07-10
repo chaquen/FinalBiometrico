@@ -23,6 +23,13 @@ function iniciar_evento_participantes(){
              datos.created_at=horaCliente();
              datos.tipo_registro="nuevo";
              datos.state=true;
+             if(datos.etnia=="Otro"){
+                datos.etnia=document.getElementById("txt_et_otro").value;
+             }
+
+             if(datos.tipo_doc=="0"){
+                return false;
+             }
                 //registrarDato("participantes",{datos:datos,id:data.id},function(rs){
                 registrarDatoOff(globales._URL+"controlador/controlador_participantes.php","crearParticipanteSinEvento",{datos:datos,id:pos},function(rs){
                         if(rs.respuesta==true){
@@ -77,7 +84,7 @@ function iniciar_evento_participantes(){
             }
 
             crear_data_list_dos("lista_datos_2",dep);
-            console.log(documento.getElemetById("lista_datos_2"));
+            console.log(document.getElementById("lista_datos_2"));
     });
 
      agregarEvento("txt_dep_2","keypress",function(e){        
@@ -158,7 +165,15 @@ function iniciar_evento_participantes(){
          }
             
     });*/
-
+    agregarEvento("selEtnia","change",function(){
+        console.log(this.value);
+        console.log("Otro");
+        if(this.value==="Otro"){
+            document.getElementById("txt_et_otro").style.display="";
+        }else{
+            document.getElementById("txt_et_otro").style.display="none";
+        }
+    });
     cargar_archivos();
 
 }
