@@ -1038,5 +1038,7 @@ $.fn.serializarFormulario2 = function()
           
       } 
       ndata_form.escolaridad=ar;  
+
+     
       return ndata_form;
 };

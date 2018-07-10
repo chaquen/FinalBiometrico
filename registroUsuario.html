@@ -57,7 +57,7 @@
                 <ul class="identificacion">                    
                     <li>
                         <select name="tipo_doc" required>
-                            <option>--Tipo de Documento--</option>
+                            <option value="0">--Tipo de Documento--</option>
                             <option value="CC">Cedula Ciudadania</option>
                             <option value="CE">Cedula extranjera</option>
                             <option value="PP">Passaporte</option>
@@ -142,21 +142,19 @@
                     </li>
                     <li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="etnia" required>
-                            <label class="mdl-textfield__label" for="sample3">Etnia</label>
-                        </div> 
-                        <!--
-                            <select name="etnia" required>
-                                <datalist id="lis_etnias">
+                        
+                            <select id="selEtnia" name="etnia" required>
+                                
                                     <option value="Indígena">Indígena</>
                                     <option value="Negro (Afro-colombiano)">Negro (Afro-colombiano)</>
                                     <option value="Blanco">Blanco</>
                                     <option value="Mestizo">Mestizo</>
                                     <option value="Zambo">Zambo</>
-                                    <option value="Otro ">Otro </>
-                                <datalist />
+                                    <option value="Otro">Otro </>
+                                
                             </select>
-                        -->
+                           <input id="txt_et_otro" class="mdl-textfield__input" type="text" style="display: none" > 
+                        </div>    
                     </li>
                 </ul>
                 <ul class="ubicacion">
@@ -201,7 +199,7 @@
                 <ul class="escolaridad">
                     <li>
                         <select name="escolaridad" required>
-                            <option>--Nivel de Escolaridad--</option>
+                            <option value="0">--Nivel de Escolaridad--</option>
                             <option>Primaria</option>
                             <option>Bachillerato</option>
                             <option>Tecnico</option>

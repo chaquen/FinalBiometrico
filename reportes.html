@@ -58,13 +58,14 @@
                     </li>
                 </ul>
                 <ul class="identificacion">    
-                    <li>
+                    <!--<li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" name="pri_apellido" >
                             <label class="mdl-textfield__label" for="sample3">Nombre Participante</label>
                         </div>
                         
-                    </li>                
+                    </li>-->
+                    <li></li>                
                     <li>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
                             <input  value="0" type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="tipo_doc" checked>
@@ -190,9 +191,18 @@
                     </li>
                     <li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="etnia" list="lista_datos_etnia">
-                            <datalist id="lista_datos_etnia"></datalist>
-                            <label class="mdl-textfield__label" for="sample3">Etnia</label>
+                            
+                            <select name="etnia" id="selEtnia">
+                                    <option value="0">Todas las etnias</option>
+                                    <option value="Indígena">Indígena</option>
+                                    <option value="Negro (Afro-colombiano)">Negro (Afro-colombiano)</option>
+                                    <option value="Blanco">Blanco</option>
+                                    <option value="Mestizo">Mestizo</option>
+                                    <option value="Zambo">Zambo</option>
+                                    <option value="Otro">Otro </option>
+                            </select>
+                            <input id="txt_et_otro" style="display:none; " class="mdl-textfield__input" type="text"  >
+                            
                         </div> 
                     </li>
                 </ul>
@@ -269,8 +279,8 @@
                     </li>
                     <li>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-19">
-                            <input value="Secundaria" name="escolaridad" type="checkbox" id="checkbox-19" class="mdl-checkbox__input">
-                            <span class="mdl-checkbox__label">Secundaria</span>
+                            <input value="Bachillerato" name="escolaridad" type="checkbox" id="checkbox-19" class="mdl-checkbox__input">
+                            <span class="mdl-checkbox__label">Bachillerato</span>
                          </label>
                     </li>
                     <li>
@@ -372,6 +382,24 @@
                         </table>
                     </div>
                 </div>
+
+                <!--Grafico Reporte General-->
+                <div class="vistaReporte2">
+                    <h5 class="tituloRepor">Reporte Asistencia</h5>
+                    <div id="divReporteGeneralDoc">
+                        <table id="tblListaGeneralDoc" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                        </table>
+                    </div>
+                </div>
+                <div class="vistaReporte3">
+                    <h5 class="tituloRepor">Reporte Asistencia</h5>
+                    <div id="divReporteGeneralNom">
+                        <table id="tblListaGeneralNom" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                        </table>
+                    </div>
+                </div>
+
+
 
                 <!--Grafico Reporte de Genero-->
                 <div id="divGenero">

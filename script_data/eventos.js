@@ -34,6 +34,18 @@ function iniciar_menu_eventos(){
 		
 
 		});
+		registrarDatoOff(globales._URL_BE+"controlador/controlador_eventos.php","preparar_eventos",{},function(rs){
+                        if(rs.respuesta==false){
+                            mostrarMensaje("Error al selecciona evento");
+                            
+                        }else{
+                             //console.log(eval(rs.valores_consultados)[0].id);
+                             
+                        }
+                        
+
+                    
+                },"");
 }
 
 
