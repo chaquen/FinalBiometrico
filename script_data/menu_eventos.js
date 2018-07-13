@@ -36,15 +36,10 @@ function iniciar_menu_eventos(){
 	});
 	agregarEvento("btnSalir","click",function(){
 
-							if(confirm("¿Estas seguro de salir de la aplicación?")){
-								eliminar_local_storage("ssUsuario");
-								location.href="index.html";		
-							}else{
-								mostrarMensaje("Por favor registra una huella");
-							}
-					
-		
-
+		if(confirm("¿Estas seguro de salir de la aplicación?")){
+			eliminar_local_storage("ssUsuario");
+			location.href="index.html";		
+		}
 	});
 
 	consultar_db();

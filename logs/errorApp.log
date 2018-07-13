@@ -1032,3 +1032,23 @@ PHP Error[13-07-18 17:49:28] => {1}=>{SELECT documento FROM participantes WHERE 
 PHP Error[13-07-18 17:52:23] => {1}=>{SELECT documento FROM participantes WHERE documento = '20584312'}
 PHP Error[13-07-18 17:56:15] => {1}=>{SELECT documento FROM participantes WHERE documento = '20584312'}
 PHP Error[13-07-18 18:12:55] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[13-07-18 18:17:01] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[13-07-18 18:20:46] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[13-07-18 18:21:03] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[13-07-18 18:21:39] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[13-07-18 18:33:35] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[13-07-18 18:41:33] => {1}=>{SELECT * FROM users WHERE email = 'amora094@gmail.comQ' AND pass = '12345678'}
+PHP Error[13-07-18 18:47:02] => {1}=>{}
+PHP Error[13-07-18 18:47:09] => {1}=>{}
+PHP Error[13-07-18 18:47:55] => {1}=>{}
+PHP Error[13-07-18 18:48:51] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[13-07-18 18:48:51] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[13-07-18 18:48:52] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[13-07-18 18:49:31] => {1}=>{SELECT participantes.id,participantes.pri_nombre,participantes.seg_nombre,participantes.pri_apellido,participantes.seg_apellido FROM participantes INNER JOIN detalle_participantes ON participantes.documento = detalle_participantes.user_id WHERE participantes.estado_registro = 'participando' AND detalle_participantes.event_id = '6' }
+PHP Error[13-07-18 18:49:31] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[13-07-18 18:49:34] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[13-07-18 18:49:37] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}

@@ -145,27 +145,14 @@ function iniciar_evento_participantes(){
         });
     });
 
-   
-    /*agregarEvento("txt_leg_exp","keypress",function(e){        
-        console.log(e);
-        console.log(e.key);
-        var mun=[];
-         if (e.keyCode != 13 && e.key!=undefined) {
-            for(var el in globales._departamentos){
-                console.log(globales.municipios[el].toUpperCase());
-                console.log(e.key);
-                
-                if(globales._municipios[el].toUpperCase().indexOf(e.key.toUpperCase()) >= 0){
-                    
-                    //console.log(globales._departamentos[el].departamento);
-                    mun.push(globales.municipios[el]);
-                }
-            }
-            console.log(dep2)
-            crear_data_list("lista_muni",mun2,"id","ciudades");  
-         }
-            
-    });*/
+    agregarEvento("btnSalir","click",function(){
+
+        if(confirm("¿Estas seguro de salir de la aplicación?")){
+            eliminar_local_storage("ssUsuario");
+            location.href="index.html";     
+        }
+    });
+
     agregarEvento("selEtnia","change",function(){
         console.log(this.value);
         console.log("Otro");

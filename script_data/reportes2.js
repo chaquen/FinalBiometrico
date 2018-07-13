@@ -1160,6 +1160,14 @@ function iniciar_reportes(){
 		}
 		
 	});
+	agregarEvento("btnSalir","click",function(){
+
+		if(confirm("¿Estas seguro de salir de la aplicación?")){
+			eliminar_local_storage("ssUsuario");
+			location.href="index.html";		
+		}
+	});
+
 
 
 }
