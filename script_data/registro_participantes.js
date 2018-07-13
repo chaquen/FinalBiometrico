@@ -28,6 +28,7 @@ function iniciar_evento_participantes(){
              }
 
              if(datos.tipo_doc=="0"){
+                mostrarMensaje("Selecciona el tipo documento");
                 return false;
              }
                 //registrarDato("participantes",{datos:datos,id:data.id},function(rs){

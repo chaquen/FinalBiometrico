@@ -19,6 +19,7 @@
             <script src="script_data/instalar.js" type="text/javascript"></script>
             <script src="script_data/preparar.js" type="text/javascript"></script>            
             <script src="script_data/sync.js" type="text/javascript"></script>
+          
         <!--FIN SCRIPT DATA-->
     </head>
   
@@ -46,7 +47,7 @@
                 </li>
                 <li id="btnOff" style="display: none">
                     <img >
-                    <h4>Estacion de trabajo Offline</h4>
+                    <h4>  Offline</h4>
                 </li>
                 <li id="btnEventos">
                     <img src="images/evento.png">
@@ -104,5 +105,53 @@
             </div>
             <!--FIN Sincrinizacion-->
         </div>
+        <script type="text/javascript">
+                if(navigator.onLine) {
+                //goOnline();
+                
+                    globales._URL=globales._URL_ONLINE;
+
+                } else {
+                   goOffline();
+                }
+
+                //window.addEventListener('offline', goOffline());
+                //window.addEventListener('online', goOnline(e));
+
+                function goOnline() {
+                    //document.body.classList.remove('offline');
+                    //document.body.classList.add('online');
+                    // Hacer algo más al ir online
+                    console.log("online");
+                    globales._URL=globales._URL_ONLINE;
+                    console.log(globales);
+
+                    document.getElementById("btnOff").style.display="none";
+                }
+
+                function goOffline(e) {
+                    //document.body.classList.remove('online');
+                    //document.body.classList.add('online');
+                    // Hacer algo más al ir offline
+                       console.log("offline");
+                        globales._URL=globales._URL_OFFLINE;
+                        console.log(globales);
+                       
+                            $('#btnPreparar').fadeOut();
+                            $('#btnInstalar').fadeOut();                            
+                            $('#btnSincronizar').fadeOut();
+                            $('#btnReportes').fadeOut();
+                            $('#btnOff').fadeIn();
+                            
+                            
+                        
+
+                        
+                        
+                        
+                        
+                        
+            }
+        </script>
   </body>
 </html>

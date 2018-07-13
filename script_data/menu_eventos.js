@@ -46,6 +46,7 @@ function iniciar_menu_eventos(){
 		
 
 	});
+
 	consultar_db();
 
 }
@@ -56,14 +57,34 @@ function consultar_db(){
 			    console.log(rs);
 			    
 			    if(rs.respuesta){
-			    	$('#btnInstalar').fadeOut();
-			    	$('#btnPreparar').fadeIn();
+			    	 if(navigator.onLine) {
+	                //goOnline();
+	                
+	                  $('#btnInstalar').fadeOut();
+			    	  $('#btnPreparar').fadeIn();
+
+	                } else {
+	                   $('#btnPreparar').fadeOut();
+                            $('#btnInstalar').fadeOut();
+                            $('#btnOff').fadeIn();
+	                }
+			    	
 			    	//document.getElementById("btnInstalar").style.display="none";
 			    	//document.getElementById("btnPreparar").style.display="block";
 			    	
 				}else{
-					$('#btnInstalar').fadeIn();
-			    	$('#btnPreparar').fadeOut();
+					  if(navigator.onLine) {
+	                //goOnline();
+	                
+	                  $('#btnInstalar').fadeIn();
+			    	  $('#btnPreparar').fadeOut();
+
+	                } else {
+	                   $('#btnPreparar').fadeOut();
+                            $('#btnInstalar').fadeOut();
+                            $('#btnOff').fadeIn();
+	                }
+					
 			    	//document.getElementById("btnInstalar").style.display="block";
 			    	//document.getElementById("btnPreparar").style.display="none";
 			    	
