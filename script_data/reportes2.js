@@ -83,7 +83,7 @@ function iniciar_reportes(){
 		switch(datos.tipo_reporte){
 				
 			case "TipoTortas":
-				registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
+				/*registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
 						console.log(rs);
 						if(rs.respuesta){
 							
@@ -92,7 +92,7 @@ function iniciar_reportes(){
 							document.getElementById("tblListaGeneral").style.display="none";
 						}				
 
-				},"");
+				},"");*/
 		
 			
 				registrarDato("reportes_general",{datos,id_evento:document.getElementById("selEventos").value},function(rs){
@@ -335,7 +335,7 @@ function iniciar_reportes(){
 			case "TipoBarras":
 
 
-				registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
+				/*registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
 						console.log(rs);
 						if(rs.respuesta){
 							
@@ -345,7 +345,7 @@ function iniciar_reportes(){
 							document.getElementById("tblListaGeneral").style.display="none";
 						}				
 
-				},"");
+				},"");*/
 		
 			
 				registrarDato("reportes_general",{datos,id_evento:document.getElementById("selEventos").value},function(rs){
@@ -558,7 +558,7 @@ function iniciar_reportes(){
 				break;	
 			default:
 
-				registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
+				/*registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
 						console.log(rs);
 						if(rs.respuesta){
 							
@@ -567,7 +567,7 @@ function iniciar_reportes(){
 							document.getElementById("tblListaGeneral").style.display="none";
 						}				
 
-				},"");
+				},"");*/
 		
 			
 				registrarDato("reportes_general",{datos,id_evento:document.getElementById("selEventos").value},function(rs){
@@ -805,7 +805,7 @@ function iniciar_reportes(){
 						}						
 
 				},"");	
-				registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
+				/*registrarDato("reportes_lista_general",{id_evento:document.getElementById("selEventos").value},function(rs){
 						console.log(rs);
 						if(rs.respuesta){
 							
@@ -815,7 +815,7 @@ function iniciar_reportes(){
 							document.getElementById("tblListaGeneral").style.display="none";
 						}				
 
-				},"");
+				},"");*/
 		
 			
 				registrarDato("reportes_general",{datos,id_evento:document.getElementById("selEventos").value},function(rs){
