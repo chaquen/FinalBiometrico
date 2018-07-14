@@ -145,5 +145,38 @@
                            
             }
         </script>
+         <dialog class="mdl-dialog" id="mensaje">
+            <h4 id="tMsn" class="mdl-dialog__title"></h4>
+            <div class="mdl-dialog__content">
+                <p id="pMsn">
+                ¿Listo para preparar, te pedimos por favor tengas paciencia este proceso puede tarder un poco?
+              </p>
+            </div>
+            <div class="mdl-dialog__actions">
+              <button id="btnAceptar" type="button" class="mdl-button close">Aceptar</button>
+              <button id="btnCancelar"  type="button" class="mdl-button close">Cancelar</button>
+             
+            </div>
+          </dialog>
+        <script>
+            var dialog = document.querySelector('dialog');
+            
+            if (! dialog.showModal) {
+              dialogPolyfill.registerDialog(dialog);
+            }
+            var showDialogButton = document.querySelector('#btnPreparar');
+            showDialogButton.addEventListener('click', function() {
+                
+               // dialog.showModal();
+                
+            });
+            
+            dialog.querySelector('.close').addEventListener('click', function() {
+              dialog.close();
+            });
+           
+
+            
+          </script>
   </body>
 </html>

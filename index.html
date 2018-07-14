@@ -214,6 +214,16 @@ and open the template in the editor.
                 
                 location.href="menuEventos.html";
             });
-            
+
+            if(!navigator.onLine) {
+                consulta_db_index()
+            }
+            function consulta_db_index(){
+            consultarDatosOff(globales._URL_BE+"controlador/controlador_usuario.php","validar_db",{},function(rs){
+                           if(!rs.respuesta){
+                             mostrarMensaje("Debes conectarte a internet para preparara tu estacion de trabajo");
+                           }
+                });
+            }
           </script>
 </html>
