@@ -8,7 +8,21 @@ class Users extends ModeloBaseDeDatos{
     public function __construct() {
         
     }
-    
+    public function ultima_preparacion(){
+        $this->sentencia_sql="SELECT * FROM sincronizaciones ORDER BY fecha DESC LIMIT 1";
+        //var_dump($this->consultar_registros());
+        if($this->consultar_registros()!=false){
+            return array("mensaje"=> "Equipo listo",
+                    "valores_consultados"=>$this->filas_json,
+                    "respuesta"=>TRUE);
+
+           
+        }else{
+            return array("mensaje"=>"No se ha preparado",
+                "respuesta"=>FALSE
+                );
+        }
+    }
 
     function crear_registro($arr){
          foreach ($arr as $key => $value) {

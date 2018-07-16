@@ -63,7 +63,7 @@ function consultar_db(){
                             $('#btnInstalar').fadeOut();
                             $('#btnOff').fadeIn();
 	                }
-			    	
+			    	document.getElementById("pMsn").innerHTML=rs.mensaje+", ultima fecha y hora de preparacion "+eval(rs.valores_consultados)[0].fecha+"\n ¿Quieres prepararlo de nuevo?";
 			    	//document.getElementById("btnInstalar").style.display="none";
 			    	//document.getElementById("btnPreparar").style.display="block";
 			    	

@@ -1136,3 +1136,5 @@ PHP Error[14-07-18 08:55:52] => {1}=>{SENTENCIA
 PHP Error[14-07-18 08:56:11] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[14-07-18 08:56:11] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
 PHP Error[14-07-18 08:56:13] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[16-07-18 02:41:31] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[16-07-18 02:54:29] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }

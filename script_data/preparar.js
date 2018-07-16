@@ -17,10 +17,17 @@ function iniciar_menu_preparar(){
 
 			    console.log(rs);
 			    var msn="";
+			    console.log(Object.keys(rs).length);
 			    for(var r in rs){
 
-			    	//msn+=rs[r].mensaje+"\n";
+			    	msn+=rs[r].mensaje+"\n";
 			    }
+			    if(Object.keys(rs).length==1){
+			    	document.getElementById('msnPrepara').innerHTML=rs.mensaje;
+			    }else{
+			    	document.getElementById('msnPrepara').innerHTML=msn;	
+			    }
+			    
 			    
 			    //mostrarMensaje(msn); 
 			},function(jqXHR, textStatus, errorThrown){

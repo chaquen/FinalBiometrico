@@ -32,7 +32,7 @@
         <div id="menuAdmin" class="menuAdmin">
             <ul>
                 <li>
-                    <img>
+                   <img src="images/home.png">
                     <a href="menuEventos.html"><h4>Inicio</h4></a>
                 </li>
                 <li id="btnEventos">
@@ -132,7 +132,7 @@
                     </li>
                     <li>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-6">
-                            <input value="18a25" name="edad" type="checkbox" id="checkbox-6" class="mdl-checkbox__input">
+                            <input value="18a28" name="edad" type="checkbox" id="checkbox-6" class="mdl-checkbox__input">
                             <span class="mdl-checkbox__label">18 a 28</span>
                          </label>
                     </li>
@@ -384,14 +384,14 @@
                 </div>
 
                 <!--Grafico Reporte General-->
-                <div class="vistaReporte2">
+                <div id="divListaAsis1" class="vistaReporte2">
                     <h5 class="tituloRepor">Reporte Asistencia</h5>
                     <div id="divReporteGeneralDoc">
                         <table id="tblListaGeneralDoc" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                         </table>
                     </div>
                 </div>
-                <div class="vistaReporte3">
+                <div id="divListaAsis2" class="vistaReporte3">
                     <h5 class="tituloRepor">Reporte Asistencia</h5>
                     <div id="divReporteGeneralNom">
                         <table id="tblListaGeneralNom" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
@@ -441,16 +441,9 @@
                 <!--Graficos Reporte Proceso PDP-->
 
                 <div id="divOrga">
-                    <h5 class="tituloRepor">Reporte Proceso PDP</h5>
+                    <h5 class="tituloRepor">Reporte Organizacion</h5>
                      <div id="barchart_material_orga" class="barraHor"></div>
                     <div id="piechart_material_orga" ></div>
-                </div>
-
-                
-                <div id="divPro">
-                    <h5>Reporte Organizacion</h5>
-                     <div id="barchart_material_proceso" class="barraHor"></div>
-                     <div id="piechart_material_proceso" ></div>
                 </div>
 
                 <!--Grafico por Escolaridad-->
@@ -466,7 +459,22 @@
                      <div id="barchart_material_etnia" class="barraHor"></div>
                      <div id="piechart_material_etnia" ></div>
                 </div>
+                <!--Grafico Reporte Sub Etinas-->
+                <div id="divOtraEtnia">
+                    <h5 class="tituloRepor">Reporte Otras Etnias</h5>
+                     <div id="barchart_material_setnia" class="barraHor"></div>
+                     <div id="piechart_material_setnia" ></div>
+                </div>
+                <!--Reporte Organizaciones-->
+                <div id="divPro">
+                    <h5>Reporte Proceso PDP</h5>
+                     <div id="barchart_material_proceso" class="barraHor"></div>
+                     <div id="piechart_material_proceso" ></div>
+                </div>
+
             </div>
+
+            
             <!--Fin contenedor de graficos-->
         </div>   
         <!-- Fin resultados-->
