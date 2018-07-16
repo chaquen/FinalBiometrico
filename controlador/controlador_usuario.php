@@ -47,7 +47,8 @@ if(isset($_REQUEST['datos'])){
 
             $install= new Install();
             if($install->validar_db()){
-                echo  json_encode(array("mensaje"=>"Base de datos encontrada","respuesta"=>TRUE));
+
+                echo  json_encode($us->ultima_preparacion());
             }else{
                 echo  json_encode(array("mensaje"=>"Base de datos NO encontrada","respuesta"=>FALSE));
             }

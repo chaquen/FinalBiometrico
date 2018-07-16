@@ -204,5 +204,17 @@ class Eventos extends ModeloBaseDeDatos{
             }
         }
     }
+
+    public function registro_sincronizar($usuario,$fecha,$tipo){
+        $this->sentencia_sql="INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('$fecha','$usuario',$tipo)";
+         if($this->insertar_registro()){
+            //var_dump($this->filas[0]);
+                return array("mensaje"=> "sincronizacion realizada",
+                    "respuesta"=>TRUE);
+            }else{
+                return array("mensaje"=>  $this->mensajeDepuracion,"respuesta"=>FALSE);
+            }   
+
+    }
     
 }

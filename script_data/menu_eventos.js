@@ -36,16 +36,12 @@ function iniciar_menu_eventos(){
 	});
 	agregarEvento("btnSalir","click",function(){
 
-							if(confirm("¿Estas seguro de salir de la aplicación?")){
-								eliminar_local_storage("ssUsuario");
-								location.href="index.html";		
-							}else{
-								mostrarMensaje("Por favor registra una huella");
-							}
-					
-		
-
+		if(confirm("¿Estas seguro de salir de la aplicación?")){
+			eliminar_local_storage("ssUsuario");
+			location.href="index.html";		
+		}
 	});
+
 	consultar_db();
 
 }
@@ -56,14 +52,34 @@ function consultar_db(){
 			    console.log(rs);
 			    
 			    if(rs.respuesta){
-			    	$('#btnInstalar').fadeOut();
-			    	$('#btnPreparar').fadeIn();
+			    	 if(navigator.onLine) {
+	                //goOnline();
+	                
+	                  $('#btnInstalar').fadeOut();
+			    	  $('#btnPreparar').fadeIn();
+
+	                } else {
+	                   $('#btnPreparar').fadeOut();
+                            $('#btnInstalar').fadeOut();
+                            $('#btnOff').fadeIn();
+	                }
+			    	document.getElementById("pMsn").innerHTML=rs.mensaje+", ultima fecha y hora de preparacion "+eval(rs.valores_consultados)[0].fecha+"\n ¿Quieres prepararlo de nuevo?";
 			    	//document.getElementById("btnInstalar").style.display="none";
 			    	//document.getElementById("btnPreparar").style.display="block";
 			    	
 				}else{
-					$('#btnInstalar').fadeIn();
-			    	$('#btnPreparar').fadeOut();
+					  if(navigator.onLine) {
+	                //goOnline();
+	                
+	                  $('#btnInstalar').fadeIn();
+			    	  $('#btnPreparar').fadeOut();
+
+	                } else {
+	                   $('#btnPreparar').fadeOut();
+                            $('#btnInstalar').fadeOut();
+                            $('#btnOff').fadeIn();
+	                }
+					
 			    	//document.getElementById("btnInstalar").style.display="block";
 			    	//document.getElementById("btnPreparar").style.display="none";
 			    	

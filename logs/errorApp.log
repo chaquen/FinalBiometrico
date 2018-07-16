@@ -1024,3 +1024,117 @@ PHP Error[10-07-18 07:16:53] => {1}=>{SELECT documento FROM participantes WHERE 
 PHP Error[10-07-18 00:02:18] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
 PHP Error[10-07-18 00:02:18] => {1}=>{SELECT participantes.id,participantes.pri_nombre,participantes.seg_nombre,participantes.pri_apellido,participantes.seg_apellido FROM participantes INNER JOIN detalle_participantes ON participantes.documento = detalle_participantes.user_id WHERE participantes.estado_registro = 'participando' AND detalle_participantes.event_id = '6' }
 
+PHP Error[13-07-18 17:38:23] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[13-07-18 17:39:44] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[13-07-18 17:39:44] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[13-07-18 17:39:45] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[13-07-18 17:49:28] => {1}=>{SELECT documento FROM participantes WHERE documento = '20584312'}
+PHP Error[13-07-18 17:52:23] => {1}=>{SELECT documento FROM participantes WHERE documento = '20584312'}
+PHP Error[13-07-18 17:56:15] => {1}=>{SELECT documento FROM participantes WHERE documento = '20584312'}
+PHP Error[13-07-18 18:12:55] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[13-07-18 18:17:01] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[13-07-18 18:20:46] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[13-07-18 18:21:03] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[13-07-18 18:21:39] => {1}=>{SELECT 
+                             * FROM detalle_participantes}
+PHP Error[13-07-18 18:33:35] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[13-07-18 18:41:33] => {1}=>{SELECT * FROM users WHERE email = 'amora094@gmail.comQ' AND pass = '12345678'}
+PHP Error[13-07-18 18:47:02] => {1}=>{}
+PHP Error[13-07-18 18:47:09] => {1}=>{}
+PHP Error[13-07-18 18:47:55] => {1}=>{}
+PHP Error[13-07-18 18:48:51] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[13-07-18 18:48:51] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[13-07-18 18:48:52] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[13-07-18 18:49:31] => {1}=>{SELECT participantes.id,participantes.pri_nombre,participantes.seg_nombre,participantes.pri_apellido,participantes.seg_apellido FROM participantes INNER JOIN detalle_participantes ON participantes.documento = detalle_participantes.user_id WHERE participantes.estado_registro = 'participando' AND detalle_participantes.event_id = '6' }
+PHP Error[13-07-18 18:49:31] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[13-07-18 18:49:34] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[13-07-18 18:49:37] => {1}=>{SELECT id,estado_registro,pri_apellido,seg_apellido,pri_nombre,seg_nombre FROM participantes WHERE estado_registro = 'verificado' OR estado_registro = 'participando' ORDER BY updated_at DESC LIMIT 1}
+PHP Error[13-07-18 19:09:48] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[13-07-18 19:09:48] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[13-07-18 19:09:49] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[14-07-18 07:44:56] => {1}=>{Table 'db_ong_local.sincronizacion' doesn't existSENTENCIA 
+[INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53',46)]}
+PHP Error[14-07-18 07:44:56] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53',46)]}
+PHP Error[14-07-18 07:45:31] => {1}=>{Table 'db_ong_local.sincronizacion' doesn't existSENTENCIA 
+[INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53',46)]}
+PHP Error[14-07-18 07:45:31] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53',46)]}
+PHP Error[14-07-18 07:46:13] => {1}=>{Table 'db_ong_local.sincronizacion' doesn't existSENTENCIA 
+[INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53','46')]}
+PHP Error[14-07-18 07:46:13] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53','46')]}
+PHP Error[14-07-18 07:46:37] => {1}=>{Table 'db_ong_local.sincronizacion' doesn't existSENTENCIA 
+[INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53','46')]}
+PHP Error[14-07-18 07:46:37] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53','46')]}
+PHP Error[14-07-18 07:47:39] => {1}=>{Table 'db_ong_local.sincronizacion' doesn't existSENTENCIA 
+[INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53','46')]}
+PHP Error[14-07-18 07:47:39] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53','46')]}
+PHP Error[14-07-18 07:47:59] => {1}=>{Table 'db_ong_local.sincronizacion' doesn't existSENTENCIA 
+[INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53','46')]}
+PHP Error[14-07-18 07:47:59] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53','46')]}
+PHP Error[14-07-18 07:48:36] => {1}=>{Table 'db_ong_local.sincronizacion' doesn't existSENTENCIA 
+[INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53','46')]}
+PHP Error[14-07-18 07:48:36] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizacion (fecha,usuario) VALUES('2018-07-14 00:44:53','46')]}
+PHP Error[14-07-18 08:18:52] => {1}=>{Unknown column 'preparacion' in 'field list'SENTENCIA 
+[INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:18:48','46',preparacion)]}
+PHP Error[14-07-18 08:18:52] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:18:48','46',preparacion)]}
+PHP Error[14-07-18 08:18:54] => {1}=>{Unknown column 'preparacion' in 'field list'SENTENCIA 
+[INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:18:51','46',preparacion)]}
+PHP Error[14-07-18 08:18:54] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:18:51','46',preparacion)]}
+PHP Error[14-07-18 08:19:20] => {1}=>{Unknown column 'preparacion' in 'field list'SENTENCIA 
+[INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:19:17','46',preparacion)]}
+PHP Error[14-07-18 08:19:20] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:19:17','46',preparacion)]}
+PHP Error[14-07-18 08:19:55] => {1}=>{Unknown column 'preparacion' in 'field list'SENTENCIA 
+[INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:19:52','46',preparacion)]}
+PHP Error[14-07-18 08:19:55] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:19:52','46',preparacion)]}
+PHP Error[14-07-18 08:22:31] => {1}=>{Unknown column 'preparacion' in 'field list'SENTENCIA 
+[INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:22:28','46',preparacion)]}
+PHP Error[14-07-18 08:22:31] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:22:28','46',preparacion)]}
+PHP Error[14-07-18 08:22:49] => {1}=>{Unknown column 'preparacion' in 'field list'SENTENCIA 
+[INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:22:47','46',preparacion)]}
+PHP Error[14-07-18 08:22:49] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:22:47','46',preparacion)]}
+PHP Error[14-07-18 08:23:27] => {1}=>{Unknown column 'preparacion' in 'field list'SENTENCIA 
+[INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:22:47','46',preparacion)]}
+PHP Error[14-07-18 08:23:27] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:22:47','46',preparacion)]}
+PHP Error[14-07-18 08:54:55] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[14-07-18 08:54:55] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[14-07-18 08:54:56] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[14-07-18 08:55:50] => {1}=>{}
+PHP Error[14-07-18 08:55:50] => {1}=>{}
+PHP Error[14-07-18 08:55:50] => {1}=>{SENTENCIA 
+ [INSERT INTO users (id,name,lastname,pass,state,email,remember_token) 
+                VALUES ('46','Andres Test','Test Test','12345678','0','amora094@gmail.com','')]}
+PHP Error[14-07-18 08:55:50] => {1}=>{}
+PHP Error[14-07-18 08:55:50] => {1}=>{}
+PHP Error[14-07-18 08:55:50] => {1}=>{SENTENCIA 
+ [INSERT INTO eventos (id,id_ref,name,description,date,city,address,atachments,state,img,created_at,updated_at) 
+                VALUES ('6','46','Test evento sinc','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu','2018-08-03 16:03:27','La Dorada, Caldas, Colombia','','1530392637Test_pdf_2.pdf','true','','2018-07-14 01:54:18','2018-07-14 01:54:18')]}
+PHP Error[14-07-18 08:55:51] => {1}=>{}
+PHP Error[14-07-18 08:55:51] => {1}=>{}
+PHP Error[14-07-18 08:55:51] => {1}=>{SENTENCIA 
+ [INSERT INTO eventos (id,id_ref,name,description,date,city,address,atachments,state,img,created_at,updated_at) 
+                VALUES ('5','46','Evento test','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu','2018-07-03 16:02:41','La Dorada, Caldas, Colombia','','1530392597Test_pdf_2.pdf','false','','2018-07-14 01:54:18','2018-07-14 01:54:18')]}
+PHP Error[14-07-18 08:55:52] => {1}=>{}
+PHP Error[14-07-18 08:55:52] => {1}=>{}
+PHP Error[14-07-18 08:55:52] => {1}=>{SENTENCIA 
+ [INSERT INTO sincronizaciones (fecha,usuario,tipo) VALUES('2018-07-14 01:55:49','46','preparacion')]}
+PHP Error[14-07-18 08:56:11] => {1}=>{SELECT * FROM users WHERE  id = 46}
+PHP Error[14-07-18 08:56:11] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
+PHP Error[14-07-18 08:56:13] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[16-07-18 02:41:31] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
+PHP Error[16-07-18 02:54:29] => {1}=>{SELECT id FROM participantes WHERE estado_registro = 'por_registrar' }
