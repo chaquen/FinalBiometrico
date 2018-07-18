@@ -19,7 +19,7 @@ class Users extends ModeloBaseDeDatos{
            
         }else{
             return array("mensaje"=>"No se ha preparado",
-                "respuesta"=>FALSE
+                "respuesta"=>TRUE
                 );
         }
     }

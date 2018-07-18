@@ -78,8 +78,10 @@ CREATE TABLE `participantes` (
   `fecha_nac` varchar(255) DEFAULT NULL,
   `edad` int(11) DEFAULT NULL,
   `genero` varchar(255) DEFAULT NULL,
+  `sub_genero` varchar(255) DEFAULT NULL,  
   `cap_dife` varchar(255) DEFAULT NULL,
   `etnia` varchar(255) DEFAULT NULL,
+  `sub_etnia` varchar(255) DEFAULT NULL,
   `zona` varchar(255) DEFAULT NULL,
   `municipio` varchar(255) DEFAULT NULL,
   `celular` varchar(255) DEFAULT NULL,
@@ -138,10 +140,23 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detalle_procesos`
+--
+
+CREATE TABLE `detalle_procesos` (
+  `id` int(11) NOT NULL,
+  `id_usuario` int(11) UNSIGNED DEFAULT NULL,
+  `id_proceso` varchar(256) DEFAULT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
 --
+
 
 --
 -- Indexes for table `detalle_participantes`
@@ -235,6 +250,36 @@ ALTER TABLE `detalle_participantes`
 ALTER TABLE `eventos`
   ADD CONSTRAINT `eventos_id_ref_foreign` FOREIGN KEY (`id_ref`) REFERENCES `users` (`id`);
 COMMIT;
+--
+-- Indexes for table `detalle_procesos`
+--
+ALTER TABLE `detalle_procesos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_id_participante` (`id_usuario`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `detalle_procesos`
+--
+ALTER TABLE `detalle_procesos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `detalle_procesos`
+--
+ALTER TABLE `detalle_procesos`
+  ADD CONSTRAINT `fk_id_participante` FOREIGN KEY (`id_usuario`) REFERENCES `participantes` (`documento`);
+COMMIT;
+--
+-- Indexes for dumped tables
+--
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

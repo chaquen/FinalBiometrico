@@ -23,7 +23,7 @@ function iniciar_menu_preparar(){
 			    	msn+=rs[r].mensaje+"\n";
 			    }
 			    if(Object.keys(rs).length==1){
-			    	document.getElementById('msnPrepara').innerHTML=rs.mensaje;
+			    	document.getElementById('msnPrepara').innerHTML=rs[0].mensaje;
 			    }else{
 			    	document.getElementById('msnPrepara').innerHTML=msn;	
 			    }
