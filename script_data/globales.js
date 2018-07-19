@@ -5,7 +5,7 @@
 
 var globales={
 	_URL_OFFLINE:"http://localhost/api_biometric/",
-	_URL_BE:"http://localhost/Biometrico/",
+	_URL_BE:"http://localhost/FinalBiometrico/",
 	_URL_ONLINE:"https://biometric.mohansoft.com/",
 	
 	

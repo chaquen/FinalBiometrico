@@ -1175,3 +1175,4 @@ PHP Error[16-07-18 20:19:28] => {1}=>{SELECT * FROM sincronizaciones ORDER BY fe
 PHP Error[16-07-18 20:19:32] => {1}=>{SELECT * FROM users WHERE  id = 46}
 PHP Error[16-07-18 20:19:33] => {1}=>{SELECT * FROM eventos WHERE  id = 6}
 PHP Error[16-07-18 20:19:35] => {1}=>{SELECT * FROM eventos WHERE  id = 5}
+PHP Error[19-07-18 02:18:11] => {1}=>{SELECT * FROM sincronizaciones ORDER BY fecha DESC LIMIT 1}
