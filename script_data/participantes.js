@@ -116,7 +116,7 @@ function iniciar_evento_participantes(){
     });
     
 
-    registrarDatoOff(globales._URL+"controlador/controlador_eventos.php","seleccionar_evento",{id_evento:pos},function(rs){
+    registrarDatoOff(globales._URL_BE+"controlador/controlador_eventos.php","seleccionar_evento",{id_evento:pos},function(rs){
                         if(rs.respuesta==false){
                             mostrarMensaje("Error al selecciona evento");
                             

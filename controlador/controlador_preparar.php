@@ -6,6 +6,8 @@ $objeto= new Participantes();
 $evento=new Eventos();
 $user=new Users();
 $down=new CurlUse();
+$eve=new Eventos();
+
 
 $ch = curl_init();
 // definimos la URL a la que hacemos la petición
@@ -38,7 +40,7 @@ if($da!=NULL){
 	$i=0;
 
 	foreach ($da->eventos as $key => $value) {
-		//	var_dump($value);
+		//var_dump($value);
 		$evento=new Eventos();	
 		$resp[$i]=$evento->crear_registro($value);
 		$i++;
@@ -147,7 +149,7 @@ if($da!=NULL){
 	                                  		  '$updated_at',
 	                                  		  'antiguo',
 	                                  		  '".$huela."')";
-
+//echo $sql;
 	           
 		        if ($conn->query($sql) === TRUE) {
 					//echo "New record created successfully";
@@ -155,7 +157,8 @@ if($da!=NULL){
 					//echo "Error: " . $sql . "<br>" . $conn->error;
 				}	
 		}
-		   	
+	
+	$eve->registro_sincronizar($us->datos->id,$us->hora_cliente,"'preparacion'");
         
 
 
@@ -167,7 +170,7 @@ if($da!=NULL){
 
 }else{
 	echo json_encode(["mensaje"=>"ha ocurrido un error por favor comunicate con el administrador"]);
-    print_r($remote_server_output);
+    //print_r($remote_server_output);
 }
 
 

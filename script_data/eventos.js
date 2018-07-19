@@ -34,6 +34,26 @@ function iniciar_menu_eventos(){
 		
 
 		});
+		registrarDatoOff(globales._URL_BE+"controlador/controlador_eventos.php","preparar_eventos",{},function(rs){
+                        if(rs.respuesta==false){
+                            mostrarMensaje("Error al selecciona evento");
+                            
+                        }else{
+                             //console.log(eval(rs.valores_consultados)[0].id);
+                             
+                        }
+                        
+
+                    
+                },"");
+	agregarEvento("btnSalir","click",function(){
+
+		if(confirm("¿Estas seguro de salir de la aplicación?")){
+			eliminar_local_storage("ssUsuario");
+			location.href="index.html";		
+		}
+	});
+
 }
 
 

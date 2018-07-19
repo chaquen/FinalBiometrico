@@ -44,7 +44,7 @@ curl_close ($ch);
 // hacemos lo que queramos con los datos recibidos
 // por ejemplo, los mostramos
 //echo "falta respuesta de servidor";
-//print_r($remote_server_output);
+print_r($remote_server_output);
 }else{
 echo json_encode(array("mensaje"=>"No registros para sincronizar","respuesta"=>true));
 }

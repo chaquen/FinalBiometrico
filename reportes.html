@@ -32,16 +32,16 @@
         <div id="menuAdmin" class="menuAdmin">
             <ul>
                 <li>
-                    <img>
+                   <img src="images/home.png">
                     <a href="menuEventos.html"><h4>Inicio</h4></a>
                 </li>
                 <li id="btnEventos">
                     <img src="images/evento.png">
                     <a href="eventos.html"><h4>Eventos</h4></a>
                 </li>    
-                <li>
+                <li id="btnSalir">
                     <img src="images/salir.png">
-                    <a href="index.html"><h4>Salir</h4></a>
+                    <a ><h4>Salir</h4></a>
                 </li>
             </ul>
         </div>
@@ -58,13 +58,14 @@
                     </li>
                 </ul>
                 <ul class="identificacion">    
-                    <li>
+                    <!--<li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" name="pri_apellido" >
                             <label class="mdl-textfield__label" for="sample3">Nombre Participante</label>
                         </div>
                         
-                    </li>                
+                    </li>-->
+                    <li></li>                
                     <li>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
                             <input  value="0" type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="tipo_doc" checked>
@@ -131,7 +132,7 @@
                     </li>
                     <li>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-6">
-                            <input value="18a25" name="edad" type="checkbox" id="checkbox-6" class="mdl-checkbox__input">
+                            <input value="18a28" name="edad" type="checkbox" id="checkbox-6" class="mdl-checkbox__input">
                             <span class="mdl-checkbox__label">18 a 28</span>
                          </label>
                     </li>
@@ -181,6 +182,12 @@
                          </label>
                     </li>
                     <li>
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-13">
+                            <input value="Otro" name="genero" type="checkbox" id="checkbox-13" class="mdl-checkbox__input">
+                            <span class="mdl-checkbox__label">Otro</span>
+                         </label>
+                    </li>
+                    <li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" name="cap_dife" list="lista_datos_cap_dife">
                             <label class="mdl-textfield__label" for="sample3">Capacidades Diferentes</label>
@@ -190,9 +197,18 @@
                     </li>
                     <li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="etnia" list="lista_datos_etnia">
-                            <datalist id="lista_datos_etnia"></datalist>
-                            <label class="mdl-textfield__label" for="sample3">Etnia</label>
+                            
+                            <select name="etnia" id="selEtnia">
+                                    <option value="0">Todas las etnias</option>
+                                    <option value="Indígena">Indígena</option>
+                                    <option value="Negro (Afro-colombiano)">Negro (Afro-colombiano)</option>
+                                    <option value="Blanco">Blanco</option>
+                                    <option value="Mestizo">Mestizo</option>
+                                    <option value="Zambo">Zambo</option>
+                                    <option value="Otro">Otro </option>
+                            </select>
+                            <input id="txt_et_otro" style="display:none; " class="mdl-textfield__input" type="text"  >
+                            
                         </div> 
                     </li>
                 </ul>
@@ -269,8 +285,8 @@
                     </li>
                     <li>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-19">
-                            <input value="Secundaria" name="escolaridad" type="checkbox" id="checkbox-19" class="mdl-checkbox__input">
-                            <span class="mdl-checkbox__label">Secundaria</span>
+                            <input value="Bachillerato" name="escolaridad" type="checkbox" id="checkbox-19" class="mdl-checkbox__input">
+                            <span class="mdl-checkbox__label">Bachillerato</span>
                          </label>
                     </li>
                     <li>
@@ -289,6 +305,12 @@
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-22">
                             <input value="Universitario" name="escolaridad" type="checkbox" id="checkbox-22" class="mdl-checkbox__input">
                             <span class="mdl-checkbox__label">Universitario</span>
+                         </label>
+                    </li>
+                    <li>
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-22">
+                            <input value="Ninguno" name="escolaridad" type="checkbox" id="checkbox-22" class="mdl-checkbox__input">
+                            <span class="mdl-checkbox__label">Ninguno</span>
                          </label>
                     </li>
                     <li>
@@ -332,13 +354,13 @@
                     </li>-->
                     <li>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-24">
-                            <input value="TipoTortas" name="tipo_reporte" type="checkbox" id="checkbox-24" class="mdl-checkbox__input">
+                            <input value="TipoTortas" name="tipo_reporte" type="checkbox" id="checkbox-24" class="mdl-checkbox__input" selected>
                             <span class="mdl-checkbox__label">Grafico en Tortas</span>
                          </label>
                     </li>
                     <li>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-25">
-                            <input value="TipoBarras" name="tipo_reporte" type="checkbox" id="checkbox-25" class="mdl-checkbox__input">
+                            <input value="TipoBarras" name="tipo_reporte" type="checkbox" id="checkbox-25" class="mdl-checkbox__input" selected>
                             <span class="mdl-checkbox__label">Grafico en Barras</span>
                          </label>
                     </li>
@@ -373,8 +395,26 @@
                     </div>
                 </div>
 
+                <!--Grafico Reporte General-->
+                <div id="divListaAsis1" class="vistaReporte2">
+                    <h5 class="tituloRepor">Reporte Asistencia</h5>
+                    <div id="divReporteGeneralDoc">
+                        <table id="tblListaGeneralDoc" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                        </table>
+                    </div>
+                </div>
+                <div id="divListaAsis2" class="vistaReporte3">
+                    <h5 class="tituloRepor">Reporte Asistencia</h5>
+                    <div id="divReporteGeneralNom">
+                        <table id="tblListaGeneralNom" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                        </table>
+                    </div>
+                </div>
+
+
+
                 <!--Grafico Reporte de Genero-->
-                <div id="divGenero" class="divisionReportes">
+                <div id="divGenero">
                     <h5 class="tituloRepor">Reporte de Genero</h5>
                      <div id="barchart_material_gen" class="barraHor"></div>
                      <div id="piechart_material_gen"></div>
@@ -413,13 +453,9 @@
                 <!--Graficos Reporte Proceso PDP-->
 
                 <div id="divOrga">
-                    <h5 class="tituloRepor">Reporte Proceso PDP</h5>
+                    <h5 class="tituloRepor">Reporte Organizacion</h5>
                      <div id="barchart_material_orga" class="barraHor"></div>
                     <div id="piechart_material_orga" ></div>
-                </div>
-                <div id="divPro">
-                     <div id="barchart_material_proceso" class="barraHor"></div>
-                     <div id="piechart_material_proceso" ></div>
                 </div>
 
                 <!--Grafico por Escolaridad-->
@@ -435,7 +471,22 @@
                      <div id="barchart_material_etnia" class="barraHor"></div>
                      <div id="piechart_material_etnia" ></div>
                 </div>
+                <!--Grafico Reporte Sub Etinas-->
+                <div id="divOtraEtnia">
+                    <h5 class="tituloRepor">Reporte Otras Etnias</h5>
+                     <div id="barchart_material_setnia" class="barraHor"></div>
+                     <div id="piechart_material_setnia" ></div>
+                </div>
+                <!--Reporte Organizaciones-->
+                <div id="divPro">
+                    <h5>Reporte Proceso PDP</h5>
+                     <div id="barchart_material_proceso" class="barraHor"></div>
+                     <div id="piechart_material_proceso" ></div>
+                </div>
+
             </div>
+
+            
             <!--Fin contenedor de graficos-->
         </div>   
         <!-- Fin resultados-->

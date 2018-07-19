@@ -35,7 +35,7 @@ function goOffline(e) {
         if(document.getElementById("btnInstalar")!=null){
             document.getElementById("btnInstalar").style.display="none";
         }
-
+        console.log(document.getElementById("btnPreparar"));
         if(document.getElementById("btnPreparar")!=null){
             document.getElementById("btnPreparar").style.display="none";
         }

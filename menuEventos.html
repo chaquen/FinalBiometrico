@@ -19,6 +19,7 @@
             <script src="script_data/instalar.js" type="text/javascript"></script>
             <script src="script_data/preparar.js" type="text/javascript"></script>            
             <script src="script_data/sync.js" type="text/javascript"></script>
+          
         <!--FIN SCRIPT DATA-->
     </head>
   
@@ -41,12 +42,12 @@
                     <h4>Instalar</h4>
                 </li>
                 <li id="btnPreparar" style="display: none">
-                    <img >
+                    <img src="images/prepara.png">
                     <h4>Preparar pc</h4>
                 </li>
                 <li id="btnOff" style="display: none">
-                    <img >
-                    <h4>Estacion de trabajo Offline</h4>
+                    <img src="images/server.png">
+                    <h4>  Offline</h4>
                 </li>
                 <li id="btnEventos">
                     <img src="images/evento.png">
@@ -64,9 +65,9 @@
                     <img src="images/reporte.png">
                     <a href="reportes.html"><h4>Reportes</h4></a>
                 </li>
-                <li>
+                <li id="btnSalir">
                     <img src="images/salir.png">
-                    <a href="index.html"><h4>Salir</h4></a>
+                    <a ><h4>Salir</h4></a>
                 </li>
             </ul>
         </div>
@@ -89,7 +90,7 @@
             </div>
             
             <div class="subContenido" id="listo">
-                <h5>Se preparo estacion de trabajo adecuadamente</h5>
+                <h5 id="msnPrepara">Se preparo estacion de trabajo adecuadamente</h5>
                 <input type="button" value="Aceptar" id="btnListo">
             </div>
             <!--FIN Preparación-->
@@ -104,5 +105,78 @@
             </div>
             <!--FIN Sincrinizacion-->
         </div>
+        <script type="text/javascript">
+                if(navigator.onLine) {
+                //goOnline();
+                
+                    globales._URL=globales._URL_ONLINE;
+
+                } else {
+                   goOffline();
+                }
+
+                //window.addEventListener('offline', goOffline());
+                //window.addEventListener('online', goOnline(e));
+
+                function goOnline() {
+                    //document.body.classList.remove('offline');
+                    //document.body.classList.add('online');
+                    // Hacer algo más al ir online
+                    console.log("online");
+                    globales._URL=globales._URL_ONLINE;
+                    console.log(globales);
+
+                    document.getElementById("btnOff").style.display="none";
+                }
+
+                function goOffline(e) {
+                    //document.body.classList.remove('online');
+                    //document.body.classList.add('online');
+                    // Hacer algo más al ir offline
+                       console.log("offline");
+                        globales._URL=globales._URL_OFFLINE;
+                        console.log(globales);
+                       
+                            $('#btnPreparar').fadeOut();
+                            $('#btnInstalar').fadeOut();                            
+                            $('#btnSincronizar').fadeOut();
+                            $('#btnReportes').fadeOut();
+                            $('#btnOff').fadeIn();                           
+                           
+            }
+        </script>
+         <dialog class="mdl-dialog" id="mensaje">
+            <h4 id="tMsn" class="mdl-dialog__title"></h4>
+            <div class="mdl-dialog__content">
+                <p id="pMsn">
+                ¿Listo para preparar, te pedimos por favor tengas paciencia este proceso puede tarder un poco?
+              </p>
+            </div>
+            <div class="mdl-dialog__actions">
+              <button id="btnAceptar" type="button" class="mdl-button close">Aceptar</button>
+              <button id="btnCancelar"  type="button" class="mdl-button close">Cancelar</button>
+             
+            </div>
+          </dialog>
+        <script>
+            var dialog = document.querySelector('dialog');
+            
+            if (! dialog.showModal) {
+              dialogPolyfill.registerDialog(dialog);
+            }
+            var showDialogButton = document.querySelector('#btnPreparar');
+            showDialogButton.addEventListener('click', function() {
+                
+               // dialog.showModal();
+                
+            });
+            
+            dialog.querySelector('.close').addEventListener('click', function() {
+              dialog.close();
+            });
+           
+
+            
+          </script>
   </body>
 </html>

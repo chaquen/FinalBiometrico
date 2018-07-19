@@ -23,6 +23,14 @@ function iniciar_evento_participantes(){
              datos.created_at=horaCliente();
              datos.tipo_registro="nuevo";
              datos.state=true;
+             if(datos.etnia=="Otro"){
+                datos.etnia=document.getElementById("txt_et_otro").value;
+             }
+
+             if(datos.tipo_doc=="0"){
+                mostrarMensaje("Selecciona el tipo documento");
+                return false;
+             }
                 //registrarDato("participantes",{datos:datos,id:data.id},function(rs){
                 registrarDatoOff(globales._URL+"controlador/controlador_participantes.php","crearParticipanteSinEvento",{datos:datos,id:pos},function(rs){
                         if(rs.respuesta==true){
@@ -77,7 +85,7 @@ function iniciar_evento_participantes(){
             }
 
             crear_data_list_dos("lista_datos_2",dep);
-            console.log(documento.getElemetById("lista_datos_2"));
+            console.log(document.getElementById("lista_datos_2"));
     });
 
      agregarEvento("txt_dep_2","keypress",function(e){        
@@ -137,28 +145,23 @@ function iniciar_evento_participantes(){
         });
     });
 
-   
-    /*agregarEvento("txt_leg_exp","keypress",function(e){        
-        console.log(e);
-        console.log(e.key);
-        var mun=[];
-         if (e.keyCode != 13 && e.key!=undefined) {
-            for(var el in globales._departamentos){
-                console.log(globales.municipios[el].toUpperCase());
-                console.log(e.key);
-                
-                if(globales._municipios[el].toUpperCase().indexOf(e.key.toUpperCase()) >= 0){
-                    
-                    //console.log(globales._departamentos[el].departamento);
-                    mun.push(globales.municipios[el]);
-                }
-            }
-            console.log(dep2)
-            crear_data_list("lista_muni",mun2,"id","ciudades");  
-         }
-            
-    });*/
+    agregarEvento("btnSalir","click",function(){
 
+        if(confirm("¿Estas seguro de salir de la aplicación?")){
+            eliminar_local_storage("ssUsuario");
+            location.href="index.html";     
+        }
+    });
+
+    agregarEvento("selEtnia","change",function(){
+        console.log(this.value);
+        console.log("Otro");
+        if(this.value==="Otro"){
+            document.getElementById("txt_et_otro").style.display="";
+        }else{
+            document.getElementById("txt_et_otro").style.display="none";
+        }
+    });
     cargar_archivos();
 
 }

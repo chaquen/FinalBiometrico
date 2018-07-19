@@ -8,7 +8,6 @@
         <script src="js/jquery-ui.js" type="text/javascript"></script>
         <script src="js/acordeon.js" type="text/javascript"></script>
          <!--script DATA-->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
             <script src="script_data/funciones/utilidades.js" type="text/javascript"></script>
             <script src="script_data/funciones/formatos.js" type="text/javascript"></script>
             <script src="script_data/funciones/peticiones_ajax.js" type="text/javascript"></script>
@@ -32,7 +31,7 @@
         <div id="menuAdmin" class="menuAdmin">
             <ul>
                 <li>
-                    <img>
+                     <img src="images/home.png">
                     <a href="menuEventos.html"><h4>Inicio</h4></a>
                 </li>
                 
@@ -46,9 +45,9 @@
                     <img src="images/reporte.png">
                     <a href="reportes.html"><h4>Reportes</h4></a>
                 </li>
-                <li>
+                <li id="btnSalir">
                     <img src="images/salir.png">
-                    <a href="index.html"><h4>Salir</h4></a>
+                    <a ><h4>Salir</h4></a>
                 </li>
             </ul>
         </div>
@@ -57,7 +56,7 @@
                 <ul class="identificacion">                    
                     <li>
                         <select name="tipo_doc" required>
-                            <option>--Tipo de Documento--</option>
+                            <option value="0">--Tipo de Documento--</option>
                             <option value="CC">Cedula Ciudadania</option>
                             <option value="CE">Cedula extranjera</option>
                             <option value="PP">Passaporte</option>
@@ -131,7 +130,9 @@
                             <option>--Genero--</option>
                             <option>Hombre</option>
                             <option>Mujer</option>
+                            <option>Otro</option>
                         </select>
+                        <input type="text" name="genero_otro" id="txtGenereo" style="display: none">
                     </li>
                     <li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -142,21 +143,19 @@
                     </li>
                     <li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="etnia" required>
-                            <label class="mdl-textfield__label" for="sample3">Etnia</label>
-                        </div> 
-                        <!--
-                            <select name="etnia" required>
-                                <datalist id="lis_etnias">
-                                    <option value="Indígena">Indígena</>
+                        
+                            <select id="selEtnia" name="etnia" required>
+                                
+                                    <option value="Indígena">Indígena</option>
                                     <option value="Negro (Afro-colombiano)">Negro (Afro-colombiano)</>
-                                    <option value="Blanco">Blanco</>
-                                    <option value="Mestizo">Mestizo</>
-                                    <option value="Zambo">Zambo</>
-                                    <option value="Otro ">Otro </>
-                                <datalist />
+                                    <option value="Blanco">Blanco</option>
+                                    <option value="Mestizo">Mestizo</option>
+                                    <option value="Zambo">Zambo</option>
+                                    <option value="Otro">Otro </option>
+                                
                             </select>
-                        -->
+                           <input id="txt_et_otro" class="mdl-textfield__input" type="text" style="display: none" > 
+                        </div>    
                     </li>
                 </ul>
                 <ul class="ubicacion">
@@ -192,7 +191,7 @@
                     </li>
                     <li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="email" required>
+                            <input class="mdl-textfield__input" type="text" name="email">
                             <label class="mdl-textfield__label" for="sample3">Email</label>
                         </div> 
                         
@@ -201,13 +200,15 @@
                 <ul class="escolaridad">
                     <li>
                         <select name="escolaridad" required>
-                            <option>--Nivel de Escolaridad--</option>
+                            <option value="0">--Nivel de Escolaridad--</option>
                             <option>Primaria</option>
                             <option>Bachillerato</option>
                             <option>Tecnico</option>
                             <option>Tecnologó</option>
                             <option>Universitario</option>
+                            <option>Ninguno</option>
                         </select>
+                        <input type="text" name="escolaridad_otro" id="txtEscolaridad" style="display: none">
                     </li>
                     <li>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -239,5 +240,45 @@
                 </ul>
             </form>            
         </div>
+         <script type="text/javascript">
+              if(navigator.onLine) {
+                //goOnline();
+                
+                    globales._URL=globales._URL_ONLINE;
+
+                } else {
+                   goOffline();
+                }
+
+                //window.addEventListener('offline', goOffline());
+                //window.addEventListener('online', goOnline(e));
+
+                function goOnline() {
+                    //document.body.classList.remove('offline');
+                    //document.body.classList.add('online');
+                    // Hacer algo más al ir online
+                    console.log("online");
+                    globales._URL=globales._URL_ONLINE;
+                    console.log(globales);
+
+                    document.getElementById("btnOff").style.display="none";
+                }
+
+                function goOffline(e) {
+                    //document.body.classList.remove('online');
+                    //document.body.classList.add('online');
+                    // Hacer algo más al ir offline
+                       console.log("offline");
+                        globales._URL=globales._URL_OFFLINE;
+                        console.log(globales);
+                       
+                            $('#btnPreparar').fadeOut();
+                            $('#btnInstalar').fadeOut();                            
+                            $('#btnSincronizar').fadeOut();
+                            $('#btnReportes').fadeOut();
+                            $('#btnOff').fadeIn();                           
+                           
+            }
+        </script>
   </body>
 </html>
